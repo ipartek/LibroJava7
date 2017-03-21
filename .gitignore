@@ -1,1 +1,5 @@
+#ignorar ciertas carpetas o ficheros
 /bin/
+/.settings/
+/.classpath
+/.project
