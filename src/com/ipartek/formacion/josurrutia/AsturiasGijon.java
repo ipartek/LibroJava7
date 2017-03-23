@@ -4,7 +4,7 @@ public class AsturiasGijon {
 
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Playas AsturiasGijon
 
 		String[] GijonPlayas = {"Rodiles", "El Mongol", "Playa España", "Ensenada De La Conejera",
 								"El Faro", "Playa De La Isla", "Playa De La Griega", "Cabo Lastres",

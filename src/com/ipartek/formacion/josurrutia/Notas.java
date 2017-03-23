@@ -3,6 +3,7 @@ package com.ipartek.formacion.josurrutia;
 public class Notas {
 
 	private static void ExamenesFechasNotas(){
+		//Notas de Examaenes con fecha
 		float max, min, media= 0;
 		
 		String[] arrayUF = { "UF1465", "UF1466", "UF1467",
