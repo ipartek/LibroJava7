@@ -2,8 +2,6 @@
 
 package com.ipartek.formacion.jonbarnes;
 
-import java.text.DecimalFormat;
-
 public class NotasClase {
 
 	public static void main(String[] args) {
@@ -13,16 +11,13 @@ public class NotasClase {
 		float notaAlta = 0;
 		float notaBaja = 10;
 
-		float[] arrayNotas = { (float) 6.5, (float) 8.9, (float) 5.0,
-				(float) 7.5, (float) 5.0, (float) 10.0, (float) 7.5,
-				(float) 7.2, (float) 8.8, };
+		float[] arrayNotas = { (float) 6.5, (float) 8.9, (float) 5.0, (float) 7.5, (float) 5.0, (float) 10.0,
+				(float) 7.5, (float) 7.2, (float) 8.8, };
 
-		String[] arrayUF = { "UF1465", "UF1466", "UF1467", "UF2175", "UF2176",
-				"UF2177", "UF2404", "UF2405", "UF2406" };
+		String[] arrayUF = { "UF1465", "UF1466", "UF1467", "UF2175", "UF2176", "UF2177", "UF2404", "UF2405", "UF2406" };
 
-		String[] arrayExamenes = { "06/09/2017", "21/09/2017", "29/09/2017",
-				"08/06/2017", "29/06/2017", "20/07/2017", "11/04/2017",
-				"05/05/2017", "26/05/2017" };
+		String[] arrayExamenes = { "06/09/2017", "21/09/2017", "29/09/2017", "08/06/2017", "29/06/2017", "20/07/2017",
+				"11/04/2017", "05/05/2017", "26/05/2017" };
 
 		// Ponemos el titulo primero.
 
@@ -38,8 +33,7 @@ public class NotasClase {
 			// System.out.print(arrayUF[i] + "..........");
 			// System.out.println(arrayNotas[i]);
 
-			System.out.println(arrayExamenes[i] + "..." + arrayUF[i]
-					+ ".........." + arrayNotas[i]);
+			System.out.println(arrayExamenes[i] + "..." + arrayUF[i] + ".........." + arrayNotas[i]);
 
 			if ((i + 1) % 3 == 0 && i != 0) {
 				System.out.println("-------------------------------");
@@ -61,8 +55,8 @@ public class NotasClase {
 
 		// Sacamos por pantalla, la nota media, la nota mas alta y la nota mas
 		// baja,
-		
-		//Para limitar los decimales=> String.format("%.2f",media). 
+
+		// Para limitar los decimales=> String.format("%.2f",media).
 
 		System.out.println("La notas media es: ........ " + String.format("%.2f", media));
 		System.out.println("La nota mas alta es: ........ " + notaAlta);
