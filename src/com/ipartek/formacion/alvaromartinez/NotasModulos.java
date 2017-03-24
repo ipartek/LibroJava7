@@ -12,11 +12,13 @@ public class NotasModulos {
 		float media = 0, maxima = 0, minima = 10;
 		float[] arrayNOTAS = { 6.5f, 8.9f, 5.0f, 7.5f, 5.0f, 10.0f, 7.5f, 7.2f, 8.8f };
 
+		String[] arrayFECHA = { "06/09/2017", "21/09/2017", "29/09/2017", "08/06/2017", "29/06/2017", "20/07/2017",
+				"11/04/2017", "05/05/2017", "26/05/2017", };
+
 		for (int i = 0; i < arrayNOTAS.length; i++) {
-			System.out.println(i + 1 + "." + arrayUF[i] + ": " + arrayNOTAS[i]);
 
-			media = media + arrayNOTAS[i] / arrayNOTAS.length; // arrayNotas.length;
-
+			media = media + arrayNOTAS[i] / arrayNOTAS.length;
+			System.out.println(i + 1 + "." + arrayUF[i] + " ---> " + arrayFECHA[i] + " ---> " + arrayNOTAS[i]);
 		}
 		System.out.println("MEDIA: " + media);
 
@@ -28,9 +30,9 @@ public class NotasModulos {
 		}
 		System.out.println("MÁXIMA NOTA: " + maxima);
 
-		for (int j = 0; j < arrayNOTAS.length; j++) {
-			if (arrayNOTAS[j] < minima) {
-				minima = arrayNOTAS[j];
+		for (int i = 0; i < arrayNOTAS.length; i++) {
+			if (arrayNOTAS[i] < minima) {
+				minima = arrayNOTAS[i];
 			}
 
 		}
