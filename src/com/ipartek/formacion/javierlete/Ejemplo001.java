@@ -37,6 +37,7 @@ public class Ejemplo001 {
 		return numero;
 	}
 
+	@SuppressWarnings("unused")
 	private static void ejemploDiagrama() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -57,6 +58,7 @@ public class Ejemplo001 {
 		System.out.println(num * 2);
 	}
 
+	@SuppressWarnings("unused")
 	private static void entradaClasica() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -68,6 +70,7 @@ public class Ejemplo001 {
 			System.out.println("NO ES UN NUMERO");
 	}
 
+	@SuppressWarnings("unused")
 	private static void entradaConsola() {
 		// Console c = System.console();
 		// System.out.println(c.readLine());
@@ -89,6 +92,7 @@ public class Ejemplo001 {
 		s.close();
 	}
 
+	@SuppressWarnings("unused")
 	private static void estructurasDeControl() {
 		System.out.println("Estructuras de control");
 
