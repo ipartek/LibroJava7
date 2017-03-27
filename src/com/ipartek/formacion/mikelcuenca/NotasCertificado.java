@@ -50,34 +50,33 @@ public class NotasCertificado {
 		}
 
 		double sumaArray = 0;
-		// double subSuma1Array = 0;
-		// double subSuma2Array = 0;
-		// double subSuma3Array = 0;
+		double subSuma1Array = 0;
+		double subSuma2Array = 0;
+		double subSuma3Array = 0;
 
-		// for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) {
 
-		// subSuma1Array += Notas[i];
+			subSuma1Array += Notas[i];
 
-		// }
+		}
 
-		// System.out.println("Media módulo 1: " + Math.round(subSuma1Array /
-		// 3));
+		System.out.println("Media módulo 1: " + Math.round(subSuma1Array / 3));
 
-		// for (int i = 3; i < 6; i++) {
+		for (int i = 3; i < 6; i++) {
 
-		// sumaArray += Notas[i];
+			subSuma2Array += Notas[i];
 
-		// }
+		}
 
-		// System.out.println("MEDIA: " + Math.round(sumaArray / Notas.length));
+		System.out.println("Media módulo 2: " + Math.round(subSuma2Array / 3));
 
-		// for (int i = 0; i < Notas.length; i++) {
+		for (int i = 6; i < 9; i++) {
 
-		// sumaArray += Notas[i];
+			subSuma3Array += Notas[i];
 
-		// }
+		}
 
-		// System.out.println("MEDIA: " + Math.round(sumaArray / Notas.length));
+		System.out.println("Media módulo 3: " + Math.round(subSuma3Array / 3));
 
 		for (int i = 0; i < Notas.length; i++) {
 
@@ -85,7 +84,7 @@ public class NotasCertificado {
 
 		}
 
-		System.out.println("MEDIA: " + Math.round(sumaArray / Notas.length));
+		System.out.println("MEDIA CURSO: " + Math.round(sumaArray / Notas.length));
 
 		double min, max;
 		min = max = Notas[0];
