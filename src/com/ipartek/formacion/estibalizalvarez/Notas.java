@@ -11,21 +11,30 @@ public class Notas {
 
 		System.out.println("RESUMEN");//
 
-		for (int i = 0; i < arrayNotas.length; i++) {//
+		float media = 0.0f;
+		float maxima = 0.0f;
+		float minima = 10.0f;
+		for (int i = 0; i < arrayNotas.length; i++) {// me ha creado una tabla para meter los valores.
 
 			String uf = arrayUf[i];// para que salga la columna de las UF.
 			float notas = arrayNotas[i];// para que aparezcan las notas.
 			String fechas = arrayfechas[i];// para que aparezcan las fechas.
 			if (i % 3 == 0) {// Para que cada 3 valores te ponga las rayas.
-				System.out.println("------------------");// para que pararezcan
-															// las rayas.
+
+				System.out.println("------------------");// para que pararezcan las rayas.
 			}
 			System.out.println(fechas + " " + uf + " " + notas);
+			media = media + notas;
+			if (notas > maxima)
+				maxima = notas;
+			if (notas < minima)
+				minima = notas;
 
-			System.out.println("Media:");
-			System.out.println("Nota mas alta:");
-			System.out.println("Nota mas baja:");
 		}
+		System.out.println("------------------");
+		System.out.println("Media: " + media / 9);// hay que ponerlo fuera del for para que no lo repita.
+		System.out.println("Nota mas alta: " + maxima);
+		System.out.println("Nota mas baja: " + minima);
 
 	}
 }
