@@ -3,8 +3,10 @@ package com.ipartek.formacion.javierlete;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 //import java.io.Console;
 import java.util.Scanner;
+import java.util.Vector;
 
 public class Ejemplo001 {
 
@@ -15,7 +17,50 @@ public class Ejemplo001 {
 		// entradaClasica(); // Este es un comentario largo para poder probar si esto sigue hace un salto de línea
 		// ejemploDiagrama();
 		// ejemploLeerNumero();
-		System.out.println(factorial(5));
+		// System.out.println(factorial(5));
+		// colecciones();
+		coleccionesJava5();
+	}
+
+	private static void coleccionesJava5() {
+		ArrayList<String> al = new ArrayList<String>();
+
+		al.add("Uno");
+		al.add("Dos");
+		al.add("Tres");
+
+		for (String dato : al)
+			System.out.println(dato);
+
+		String s = al.get(1);
+
+	}
+
+	@SuppressWarnings({ "unchecked", "unused" })
+	private static void colecciones() {
+		@SuppressWarnings("rawtypes")
+		Vector v = new Vector();
+
+		v.add("Hola");
+		v.add(7);
+		v.add(5.3);
+
+		v.remove(1);
+
+		v.insertElementAt("otro", 2);
+
+		for (int i = 0; i < v.size(); i++)
+			System.out.println(v.get(i));
+
+		double d = (double) v.get(1);
+
+		Object[] o = v.toArray();
+		System.out.println(o[1]);
+
+		v.add(new Vector());
+		v.add(new Vector());
+
+		((Vector) v.get(3)).add("sdadsf");
 	}
 
 	@SuppressWarnings("unused")
