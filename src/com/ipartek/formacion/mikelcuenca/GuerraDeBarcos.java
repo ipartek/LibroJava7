@@ -7,20 +7,19 @@ import java.io.InputStreamReader;
 public class GuerraDeBarcos {
 
 	public static void main(String[] args) throws IOException {
-		//Pedir al jugador el alto y el ancho del tablero. Poner el contador de barcos a 0.
-		//y dibujarlo.
+		// Pedir al jugador el alto y el ancho del tablero. Poner el contador de barcos a 0.
 		int fila = leerNumero("Alto del tablero: ");
 		int columna = leerNumero("Ancho del tablero: ");
 		int numeroDeBarcos = 0;
-		
-		//Crear un tablero del tamaño indicado de casillas señaladas como vacías
+
+		// Crear un tablero del tamaño indicado de casillas señaladas como vacías
 		String[][] tablero = new String[fila][columna];
 
 		for (int x = 0; x < tablero.length; x++)
 			for (int y = 0; y < tablero[x].length; y++)
 				tablero[x][y] = "|.|";
-		
-		//Dibujar el tablero vacío.
+
+		// Dibujar el tablero vacío.
 		for (int x = 0; x < tablero.length; x++) {
 			for (int y = 0; y < tablero[x].length; y++)
 				System.out.print(tablero[x][y]);
@@ -28,17 +27,15 @@ public class GuerraDeBarcos {
 		}
 		System.out.println();
 
-		
-		//Pedir un número de barcos menor que el número de casillas
+		// Pedir un número de barcos menor que el número de casillas
 		do {
 			if (numeroDeBarcos > fila * columna)
 				System.out.println("Demasiados barcos. ");
 			numeroDeBarcos = leerNumero("Número de barcos: ");
 		} while (numeroDeBarcos > fila * columna);
 
-		
-		//Poner tantas b en posiciones aleatorias como barcos sin 
-		//repetir posición.
+		// Poner tantas b en posiciones aleatorias como barcos sin
+		// repetir posición.
 		int a = fila;
 		int b = columna;
 
@@ -54,9 +51,8 @@ public class GuerraDeBarcos {
 
 		}
 
-		
-		//Pedir un numero de fila y un número de columna sin que se puedan salir
-		//del tablero tantas veces como número de barcos quedan.
+		// Pedir un numero de fila y un número de columna sin que se puedan salir
+		// del tablero tantas veces como número de barcos quedan.
 		int coordenadaFila = 0;
 		int coordenadaColumna = 0;
 
@@ -76,8 +72,8 @@ public class GuerraDeBarcos {
 
 			} while (coordenadaColumna >= tablero[0].length);
 
-			//Y si coinciden con una casilla barco cambiarla por una x, dar
-			//el mensaje de Hundido
+			// Y si coinciden con una casilla barco cambiarla por una x, dar
+			// el mensaje de Hundido
 
 			if (tablero[coordenadaFila][coordenadaColumna] == "|b|") {
 
@@ -89,9 +85,9 @@ public class GuerraDeBarcos {
 				System.out.println("Agua");
 				i--;
 			}
-			
-			//Y pintar el tablero ocultando los barcos pintando un vacio
-			//en esas casillas.
+
+			// Y pintar el tablero ocultando los barcos pintando un vacio
+			// en esas casillas.
 			for (int x = 0; x < tablero.length; x++) {
 				for (int y = 0; y < tablero[x].length; y++)
 					if (tablero[x][y] == "|b|") {
@@ -104,14 +100,13 @@ public class GuerraDeBarcos {
 			}
 
 		}
-		
-		//Cuando no quedan barcos el juego termina.
+
+		// Cuando no quedan barcos el juego termina.
 		System.out.println("Felicidades!");
 
 	}
 
-	
-	//Método creado para pedir un número y sólo aceptar enteros positivos.
+	// Método creado para pedir un número y sólo aceptar enteros positivos.
 	public static int leerNumero(String mensaje) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
