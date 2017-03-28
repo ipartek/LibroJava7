@@ -14,7 +14,21 @@ public class Ejemplo001 {
 		// entradaConsola();
 		// entradaClasica(); // Este es un comentario largo para poder probar si esto sigue hace un salto de línea
 		// ejemploDiagrama();
+		// ejemploLeerNumero();
+		System.out.println(factorial(5));
+	}
 
+	@SuppressWarnings("unused")
+	private static int factorial(int numero) {
+		if (numero == 1) {
+			return 1;
+		}
+
+		return numero * factorial(numero - 1);
+	}
+
+	@SuppressWarnings("unused")
+	private static void ejemploLeerNumero() throws IOException {
 		int a = leerNumero("A: ");
 		int b = leerNumero("B: ");
 		System.out.println("La suma de A y B es: " + (a + b));
