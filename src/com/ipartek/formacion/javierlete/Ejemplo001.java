@@ -12,7 +12,8 @@ public class Ejemplo001 {
 		// tiposDeDatos();
 		// estructurasDeControl();
 		// entradaConsola();
-		// entradaClasica(); // Este es un comentario largo para poder probar si esto sigue hace un salto de línea
+		// entradaClasica(); // Este es un comentario largo para poder probar si
+		// esto sigue hace un salto de línea
 		// ejemploDiagrama();
 
 		int a = leerNumero("A: ");
@@ -58,7 +59,6 @@ public class Ejemplo001 {
 		System.out.println(num * 2);
 	}
 
-	@SuppressWarnings("unused")
 	private static void entradaClasica() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
