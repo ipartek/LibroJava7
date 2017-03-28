@@ -3,7 +3,7 @@ package com.ipartek.formacion.leiremunarriz;
 public class Notas {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		String[] arrayFecha = { "06/09/2017", // primer array
 				"21/09/2017", "29/09/2017", "08/06/2017", "29/06/2017", "20/07/2017", "11/04/2017", "05/05/2017", "26/05/2017", };
 
