@@ -20,5 +20,8 @@ public class PruebaPunto {
 		System.out.println(String.format("pt2(%d,%d)", pt2.getX(), pt2.getY()));
 		System.out.println(String.format("pt2(%f,%f)", pt2.getXDouble(), pt2.getYDouble()));
 
+		Punto pt3 = new Punto();
+		System.out.println(String.format("pt3(%f,%f)", pt3.getXDouble(), pt3.getYDouble()));
+
 	}
 }

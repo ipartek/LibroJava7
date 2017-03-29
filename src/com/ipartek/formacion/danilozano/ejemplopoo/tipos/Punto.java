@@ -3,6 +3,19 @@ package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 public class Punto {
 	private double x, y;
 
+	public Punto(double x, double y) {
+		setX(x);
+		setY(y);
+	}
+
+	public Punto(int x, int y) {
+		this((double) x, (double) y);
+	}
+
+	public Punto() {
+		this(1.0, 1.0);
+	}
+
 	public int getX() {
 		return (int) x;
 	}
