@@ -9,7 +9,7 @@ public class Persona {
 	private Date d;
 
 	public Persona() {
-
+		this(0, "Anónimo");
 	}
 
 	public Persona(int id, String nombre) {
@@ -43,7 +43,7 @@ public class Persona {
 	}
 
 	public String aTexto() {
-		return ("ID: " + id + ", NOMBRE: " + nombre + ", " + d);
+		return (String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY", getId(), getNombre(), getFechaNacimiento()));
 	}
 
 }
