@@ -17,7 +17,7 @@ public class PersonaPrueba {
 		p1 = new Persona(1, "Javier");
 
 		// TERCERO
-		p1.setFechaNacimiento(new Date("1970/10/10"));
+		p1.setFechaNacimiento(new Date("1970/10/20"));
 
 		// CUARTO
 		System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier
