@@ -3,6 +3,21 @@ package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 public class Punto {
 	private double x, y;
 
+	public Punto(double x, double y) {
+		setX(x);
+		setY(y);
+
+		System.out.println("Se ha creado el objeto");
+	}
+
+	public Punto(int x, int y) {
+		this((double) x, (double) y);
+	}
+
+	public Punto() {
+		this(1.0, 1.0);
+	}
+
 	public int getX() {
 		return (int) x;
 	}
