@@ -12,7 +12,7 @@ public class PuntoPrueba {
 		pt1.setY(7);
 
 		System.out.println(String.format("pt1(%d,%d)", pt1.getX(), pt1.getY()));
-		System.out.println(String.format("pt1(%5.2f,%5.2f)", pt1.getXDouble(), pt1.getYDouble()));
+		System.out.println(String.format("pt1(%1.2f,%1.2f)", pt1.getXDouble(), pt1.getYDouble()));
 		System.out.println("pt1(" + pt1.getX() + "," + pt1.getY() + ")");
 
 		Punto pt2 = new Punto();
@@ -21,7 +21,7 @@ public class PuntoPrueba {
 		pt2.setY(-3.234234);
 
 		System.out.println(String.format("pt2(%d,%d)", pt2.getX(), pt2.getY()));
-		System.out.println(String.format("pt2(%f,%f)", pt2.getXDouble(), pt2.getYDouble()));
+		System.out.println(String.format("pt2(%1.2f,%1.2f)", pt2.getXDouble(), pt2.getYDouble()));
 
 	}
 

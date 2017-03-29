@@ -34,11 +34,12 @@ public class Ejemplo001 {
 
 		String s = al.get(1);
 
+		System.out.println(s);
+
 	}
 
-	@SuppressWarnings({ "unchecked", "unused" })
+	@SuppressWarnings({ "unchecked", "unused", "rawtypes" })
 	private static void colecciones() {
-		@SuppressWarnings("rawtypes")
 		Vector v = new Vector();
 
 		v.add("Hola");
