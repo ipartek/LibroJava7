@@ -1,4 +1,4 @@
-package ejemploPOO.tipos;
+package com.ipartek.formacion.alvaromartinez.ejemploPOO.tipos;
 
 public class Coche {
 
