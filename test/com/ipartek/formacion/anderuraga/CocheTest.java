@@ -31,7 +31,7 @@ public class CocheTest {
 
 		Coche c = new Coche();
 		assertEquals(PRECIO_INICIAL * 5, c.getPrecio());
-
+ 
 		c.setAntiguedad(0);
 		assertEquals(PRECIO_INICIAL * 5, c.getPrecio());
 
