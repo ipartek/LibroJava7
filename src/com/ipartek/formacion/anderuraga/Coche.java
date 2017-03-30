@@ -6,7 +6,8 @@ public class Coche {
 	private String marca;
 	private int potencia;
 	private boolean nuevo;
-	private int anyo;
+	private int antiguedad;
+
 	private int precio;
 
 	// constructores
@@ -15,16 +16,41 @@ public class Coche {
 		this.marca = "nisu";
 		this.potencia = 50;
 		this.nuevo = true;
+		this.precio = 100;
+		this.antiguedad = 0;
 	}
 
 	public Coche(String marca, int potencia) {
-		super();
+		this();
 		this.marca = marca;
 		this.potencia = potencia;
 		this.nuevo = true;
 	}
 
 	// getters y setters
+
+	public int getPrecio() {
+		int resul = precio;
+		if (antiguedad <= 0) {
+			resul = precio * 5;
+		} else if (antiguedad == 1) {
+			resul = precio * 3;
+		}
+		return resul;
+	}
+
+	public int getAntiguedad() {
+		return antiguedad;
+	}
+
+	public void setAntiguedad(int antiguedad) {
+		this.antiguedad = antiguedad;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
 	public String getMarca() {
 		return marca;
 	}
