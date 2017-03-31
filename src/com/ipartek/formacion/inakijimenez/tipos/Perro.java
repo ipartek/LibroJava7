@@ -7,6 +7,10 @@ public class Perro {
 	private String duenyo;
 	private boolean pulgas;
 
+	public Perro() {
+		System.out.println("No puede existir un perro sin nombre");
+	}
+
 	public Perro(String nombre) {
 		super();
 		this.nombre = nombre;

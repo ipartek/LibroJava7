@@ -10,6 +10,19 @@ public class Persona {
 	private String nombre;
 	private Date fechaNacimiento;
 
+	public Persona(int id, String nombre) {
+		setId(id);
+		setNombre(nombre);
+	}
+
+	public Persona() {
+		this(0, "Anonimo");
+	}
+
+	public Persona(String nombre) {
+		this(0, nombre);
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -34,15 +47,6 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Persona(int id, String nombre) {
-		setId(id);
-		setNombre(nombre);
-	}
-
-	public Persona() {
-		this(0, "Anomimo");
-	}
-
 	public String aTexto() {
 		// int id = getId();
 		// String nombre = getNombre();
@@ -54,4 +58,10 @@ public class Persona {
 		// String aTexto = "ID: " + id + ", NOMBRE: " + nombre + ", FECHA: " + fechaFormateada;
 		return String.format("ID: %d, NOMBRE: %s, Fecha Nacimiento: %s", getId(), getNombre(), fechaFormateada);
 	}
+
+	// public void addPersona(int id, String nombre){
+	//
+	// Persona(id, nombre);
+	//
+	// }
 }
