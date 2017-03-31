@@ -24,6 +24,9 @@ public class PersonaPrueba {
 
 		// CUARTO
 		System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier
+
+		// PRUEBAS PARA EL TEST
+		System.out.println(p1.getFechaNacimiento());
 	}
 
 }

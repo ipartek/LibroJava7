@@ -12,7 +12,7 @@ import org.junit.Test;
 public class PersonaTest {
 
 	Persona p;
-
+ 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		// se ejecuta al iniciar Clase de Test
