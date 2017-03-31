@@ -1,7 +1,19 @@
 package com.ipartek.formacion.ibonpomares.ejemplopoo.tipos;
 
+import java.util.Arrays;
+
 public class Coche {
 
+	public static final int 
+			DELANTERA_DERECHA = 0,
+			DELANTERA_IZQUIERDA = 1,
+			TRASERA_DERECHA = 2,
+			TRASERA_IZQUIERDA = 3;
+	
+	
+	
+	
+	
 // atributos
 	private String marca;
 	private int potencia;
@@ -13,6 +25,17 @@ public class Coche {
 //si es de 1 año es por 3
 //si es >=2 es por 1
 	
+	private Rueda[] ruedas = new Rueda[4];
+	
+	public Rueda[] getRuedas(){
+	
+		return ruedas;
+	}
+	
+	public void setRuedas(Rueda[] ruedas){
+		
+		this.ruedas = ruedas;
+	}	
 	
 //constructores
 	
@@ -94,16 +117,29 @@ public class Coche {
 		this.precio = precio;
 	}
 
-	
-	
 	@Override
 	public String toString() {
-		return "Coche [marca=" + marca + ", potencia=" + potencia + ", nuevo=" + nuevo + ", año =" + ano + " Precio=" + precio + "]";
+		return "Coche [marca=" + marca + ", potencia=" + potencia + ", nuevo=" + nuevo + ", ano=" + ano + ", precio=" + precio + ", ruedas=" + Arrays.toString(ruedas) + "]";
 	}
-	
 
 	
+	
+//	@Override
+//	public String toString() {
+//		return "Coche [marca=" + marca + ", potencia=" + potencia + ", nuevo=" + nuevo + ", año =" + ano + " Precio=" + precio + "]";
+//	}
+	
 	//otras funcionalidades
+	public void setRueda(Rueda rueda, int posicion){
+		
+		ruedas[posicion] = rueda;
+		
+	}
+
+	public Rueda getRueda(int posicion){ 
+		return ruedas[posicion];
+	}
+	
 	
 	
 	
