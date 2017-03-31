@@ -19,8 +19,8 @@ public class Perro {
 	}// constructor
 		// geters y seters
 
-	public String toString() {// te devuelve todos los string.
-		return "Perro [Nombre=" + nombre + ", Raza=" + raza + ", Dueño=" + dueño + ", Pulgas=" + pulgas +]";
+	public String toString() {// te devuelve todos los String.
+		return "Perro [Nombre=" + nombre + ", Raza=" + raza + ", Dueño=" + dueño + ", Pulgas=" + pulgas + "]";
 	}
 
 	public String getNombre() {

@@ -18,9 +18,11 @@ public class CocheTestChapuzero {
 
 		// perro
 
-		Perro Brutus = new Perro("nombre");// crear objeto perro.
-		System.out.println(Brutus.toString());
+		// Perro perro = new Perro("Brutus");// crear objeto perro de la clase Perro.
+		// System.out.println(perro.toString());
+		//
+		// Perro = new Perro("Gordi");
+		// System.out.println(.toString());
 
 	}// main
-
 }
