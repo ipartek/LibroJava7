@@ -1,15 +1,19 @@
 package com.ipartek.formacion.mikelcuenca.ejemplopoo.tipos;
 
-import java.util.Date;
-
 public class Persona {
 
 	private int id;
 	private String nombre;
-	private Date d;
+	private boolean junta;
+	private boolean director;
 
 	public Persona() {
 		this(0, "Anónimo");
+	}
+
+	public Persona(int id) {
+		setId(id);
+		setNombre("Anónimo");
 	}
 
 	public Persona(int id, String nombre) {
@@ -33,17 +37,24 @@ public class Persona {
 		return nombre;
 	}
 
-	public void setFechaNacimiento(Date d) {
-		this.d = d;
-
+	public boolean isJunta() {
+		return junta;
 	}
 
-	public Date getFechaNacimiento() {
-		return d;
+	public void setJunta(boolean junta) {
+		this.junta = junta;
 	}
 
-	public String aTexto() {
-		return (String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY", getId(), getNombre(), getFechaNacimiento()));
+	public boolean isDirector() {
+		return director;
+	}
+
+	public void setDirector(boolean director) {
+		this.director = director;
+	}
+
+	public String toString() {
+		return (String.format("ID: %d", getId()));
 	}
 
 }

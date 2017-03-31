@@ -1,7 +1,5 @@
 package com.ipartek.formacion.mikelcuenca.ejemplopoo.programa;
 
-import java.util.Date;
-
 import com.ipartek.formacion.mikelcuenca.ejemplopoo.tipos.Persona;
 
 public class PersonaPrueba {
@@ -19,14 +17,14 @@ public class PersonaPrueba {
 		// SEGUNDO
 		p1 = new Persona(1, "Javier");
 
-		// TERCERO
-		p1.setFechaNacimiento(new Date("1970/10/10"));
-
-		// CUARTO
-		System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier
-
-		// PRUEBAS PARA EL TEST
-		System.out.println(p1.getFechaNacimiento());
+		// // TERCERO
+		// p1.setFechaNacimiento(new Date("1970/10/10"));
+		//
+		// // CUARTO
+		// System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier
+		//
+		// // PRUEBAS PARA EL TEST
+		// System.out.println(p1.getFechaNacimiento());
 	}
 
 }
