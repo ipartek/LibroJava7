@@ -32,11 +32,17 @@ public class Persona {
 		return Id;
 	}
 
-	private String getNombre() {
+	public String getNombre() {
 		return Nombre;
 	}
 
 	private Date getFechaNacimiento() {
 		return FechaNacimiento;
 	}
+
+	@Override
+	public String toString() {
+		return "Persona [Id=" + Id + ", Nombre=" + Nombre + ", FechaNacimiento=" + FechaNacimiento + "]";
+	}
+
 }
