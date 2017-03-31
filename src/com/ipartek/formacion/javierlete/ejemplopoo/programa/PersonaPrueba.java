@@ -28,5 +28,6 @@ public class PersonaPrueba {
 		// CUARTO
 		System.out.println(p1.aTexto()); // ID: 1, NOMBRE: Javier, Tue Oct 20 00:00:00 CET 1970
 
+		System.out.println("SE ACABO");
 	}
 }
