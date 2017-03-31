@@ -3,6 +3,11 @@ package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 import java.util.Date;
 
 public class Persona {
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
+	}
+
 	private int id;
 	private String nombre;
 	private Date fechaNacimiento;
