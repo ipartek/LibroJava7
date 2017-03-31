@@ -23,7 +23,7 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [marca=" + marca + ", potencia=" + potencia + ", antiguedad=" + antiguedad + ", precio=" + precio + ", nuevo=" + nuevo + ", ruedas=" + Arrays.toString(ruedas) + "]";
+		return "Coche [marca=" + marca + ", potencia=" + potencia + ", antiguedad=" + antiguedad + ", precio=" + precio + ", nuevo=" + nuevo + "\nruedas=" + Arrays.toString(ruedas) + "]";
 	}
 
 	public void setMarca(String marca) {

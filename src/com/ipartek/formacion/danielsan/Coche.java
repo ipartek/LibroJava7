@@ -1,103 +1,87 @@
 package com.ipartek.formacion.danielsan;
 
-public class Coche {
+import java.util.Arrays;
 
+import com.ipartek.formacion.javierlete.ejemplopoo.tipos.Rueda;
+
+public class Coche {
 	private String marca;
 	private int potencia, antiguedad, precio;
 	private boolean nuevo;
 
-	// constructores
-	public Coche() {
-		super();
-		this.marca = "Ferrari";
-		this.potencia = 50;
-		this.nuevo = true;
-		this.antiguedad = 0;
-		this.precio = 100;
+	private Rueda[] ruedas = new Rueda[4];
 
+	public Rueda[] getRuedas() {
+		return ruedas;
 	}
 
-	public Coche(int potencia, String marca) {
-		super();
-		this.marca = marca;
-		this.potencia = potencia;
-		this.nuevo = true;
-		this.antiguedad = 0;
-		this.precio = 100;
-
+	public void setRuedas(Rueda[] ruedas) {
+		this.ruedas = ruedas;
 	}
 
-	public Coche(String marca, int potencia, int antiguedad, int precio) {
-		super();
-		this.marca = marca;
-		this.potencia = potencia;
-		this.antiguedad = antiguedad;
-		this.precio = precio;
-		isNuevo();
-
-	}
-
-	// Getters
 	public String getMarca() {
 		return marca;
+	}
+
+	@Override
+	public String toString() {
+		return "Coche [marca=" + marca + ", potencia=" + potencia + ", antiguedad=" + antiguedad + ", precio=" + precio + ", nuevo=" + nuevo + ", ruedas=" + Arrays.toString(ruedas) + "]";
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 	public int getPotencia() {
 		return potencia;
 	}
 
-	public boolean isNuevo() {
-		boolean resul;
-		if (antiguedad == 0) {
-			nuevo = true;
-		} else {
-			nuevo = false;
-		}
-		resul = nuevo;
-		return resul;
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
 	}
 
 	public int getAntiguedad() {
 		return antiguedad;
 	}
 
+	public void setAntiguedad(int antiguedad) {
+		this.antiguedad = antiguedad;
+	}
+
 	public int getPrecio() {
-
-		int resul = precio;
-		if (antiguedad <= 0) {
-			resul = precio * 5;
-		} else if (antiguedad == 1) {
-			resul = precio * 3;
-		}
-
-		return resul;
+		return precio;
 	}
 
-	// Setters
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 
-	public void setPotencia(int potencia) {
-		this.potencia = potencia;
+	public boolean isNuevo() {
+		return nuevo;
 	}
 
 	public void setNuevo(boolean nuevo) {
 		this.nuevo = nuevo;
 	}
 
-	public void setAntiguedad(int antiguedad) {
+	public Coche(String marca, int potencia, int antiguedad, int precio, boolean nuevo) {
+		super();
+		this.marca = marca;
+		this.potencia = potencia;
 		this.antiguedad = antiguedad;
-	}
-
-	public void setPrecio(int precio) {
-
 		this.precio = precio;
+		this.nuevo = nuevo;
 	}
 
-	@Override
-	public String toString() {
-		return "Coche [marca=" + marca + ", potencia=" + potencia + ", antiguedad=" + antiguedad + ", precio=" + precio + ", nuevo=" + nuevo + "]";
+	public Coche(String marca, int potencia, int antiguedad) {
+		this(marca, potencia, antiguedad, 0, false);
 	}
 
+	public Coche(String marca) {
+		this(marca, 0, 0, 0, false);
+	}
+
+	public Coche() {
+
+	}
 }
