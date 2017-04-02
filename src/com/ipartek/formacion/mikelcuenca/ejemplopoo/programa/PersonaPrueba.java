@@ -9,13 +9,13 @@ public class PersonaPrueba {
 		// PRIMERO
 		Persona p1 = new Persona();
 
-		p1.setId(5);
+		p1.setEdad(22);
 		p1.setNombre("Javier");
 
-		System.out.println(String.format("ID: %d, NOMBRE: %s", p1.getId(), p1.getNombre()));
+		System.out.println(String.format("Nombre: %s, Edad: %d", p1.getNombre(), p1.getEdad()));
 
 		// SEGUNDO
-		p1 = new Persona(1, "Javier");
+		p1 = new Persona("Javier", 22);
 
 		// // TERCERO
 		// p1.setFechaNacimiento(new Date("1970/10/10"));
