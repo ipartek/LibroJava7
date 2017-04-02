@@ -73,7 +73,8 @@ public class GuerraDeBarcos {
 			} while (coordenadaColumna >= tablero[0].length);
 
 			// Y si coinciden con una casilla barco cambiarla por una x, dar
-			// el mensaje de Hundido
+			// el mensaje de Hundido. Si coincide con una casilla punto cambiarla por
+			//una a y dar el mensaje de Agua.
 
 			if (tablero[coordenadaFila][coordenadaColumna] == "|b|") {
 
