@@ -13,29 +13,7 @@ public class NotasCertificado {
 		System.out.println("Resumen:");
 		System.out.println("--------");
 
-		/*
-		 * for (int i = 6; i < 9; i++) {
-		 * 
-		 * System.out.println(Fechas[i] + " - " + UF[i] + " - " + Notas[i]);
-		 * 
-		 * }
-		 * 
-		 * System.out.println("---------");
-		 * 
-		 * for (int i = 3; i < 6; i++) {
-		 * 
-		 * System.out.println(Fechas[i] + " - " + UF[i] + " - " + Notas[i]);
-		 * 
-		 * }
-		 * 
-		 * System.out.println("---------");
-		 * 
-		 * for (int i = 0; i < 3; i++) {
-		 * 
-		 * System.out.println(Fechas[i] + " - " + UF[i] + " - " + Notas[i]);
-		 * 
-		 * }
-		 */
+		
 
 		for (int i = 0; i < 9; i++) {
 
