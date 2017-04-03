@@ -5,6 +5,7 @@ import java.util.Date;
 public class Persona {
 	private int Id = 0;
 	private String Nombre = "";
+	@SuppressWarnings("deprecation")
 	Date FechaNacimiento = new Date("1900/01/01");
 
 	public Persona(int Id, String Nombre) {
@@ -32,11 +33,17 @@ public class Persona {
 		return Id;
 	}
 
-	private String getNombre() {
+	public String getNombre() {
 		return Nombre;
 	}
 
 	private Date getFechaNacimiento() {
 		return FechaNacimiento;
 	}
+
+	@Override
+	public String toString() {
+		return "Persona [Id=" + Id + ", Nombre=" + Nombre + ", FechaNacimiento=" + FechaNacimiento + "]";
+	}
+
 }

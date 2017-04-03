@@ -1,8 +1,5 @@
 package com.ipartek.formacion.danielsan;
 
-import com.ipartek.formacion.javierlete.ejemplopoo.tipos.Coche;
-import com.ipartek.formacion.javierlete.ejemplopoo.tipos.Rueda;
-
 public class CochePrueba {
 
 	public static void main(String[] args) {
@@ -13,9 +10,16 @@ public class CochePrueba {
 		for (int i = 0; i < ruedas.length; i++)
 			ruedas[i] = new Rueda(15.0, 12.0);
 
+		ruedas[Coche.DELANTERA_IZQUIERDA] = new Rueda(12.0, 10.0);
+
 		coche.setRuedas(ruedas);
 
-		System.out.println(coche);
-	}
+		coche.setRuedas(new Rueda(10.0, 8.0), Coche.DELANTERA_DERECHA);
 
+		System.out.println(coche.getRueda(Coche.DELANTERA_DERECHA));
+		System.out.println(coche.getRueda(Coche.DELANTERA_IZQUIERDA));
+		System.out.println(coche.getRueda(Coche.TRASERA_DERECHA));
+		System.out.println(coche.getRueda(Coche.TRASERA_IZQUIERDA));
+		// System.out.println(coche);
+	}
 }

@@ -3,6 +3,9 @@ package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 import java.util.Arrays;
 
 public class Coche {
+
+	public static final int DELANTERA_DERECHA = 0, DELANTERA_IZQUIERDA = 1, TRASERA_DERECHA = 2, TRASERA_IZQUIERDA = 3;
+
 	private String marca;
 	private int potencia, antiguedad, precio;
 	private boolean nuevo;
@@ -81,5 +84,13 @@ public class Coche {
 
 	public Coche() {
 
+	}
+
+	public void setRueda(Rueda rueda, int posicion) {
+		ruedas[posicion] = rueda;
+	}
+
+	public Rueda getRueda(int posicion) {
+		return ruedas[posicion];
 	}
 }

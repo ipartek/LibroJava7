@@ -1,13 +1,8 @@
-package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
+package com.ipartek.formacion.danielsan;
 
 import java.util.Date;
 
 public class Persona {
-	@Override
-	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
-	}
-
 	private int id;
 	private String nombre;
 	private Date fechaNacimiento;
@@ -43,12 +38,21 @@ public class Persona {
 
 	public String aTexto() {
 
-		// return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY",
+		// return
+		// String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY",
 		// getId(), getNombre(), getFechaNacimiento());
-		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(), getFechaNacimiento().getDate(), getFechaNacimiento().getMonth() + 1, getFechaNacimiento().getYear() + 1900);
+		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(), getFechaNacimiento().getDate(), getFechaNacimiento().getMonth() + 1, getFechaNacimiento()
+				.getYear() + 1900);
 	}
 
 	private Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
+
+	// To String
+	@Override
+	public String toString() {
+		return "Persona :[id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]\n";
+	}
+
 }
