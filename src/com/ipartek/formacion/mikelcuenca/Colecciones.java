@@ -17,7 +17,7 @@ public class Colecciones {
 
 	// ARRAYLIST
 
-	public static void ejemploArrayList() {
+	private static void ejemploArrayList() {
 		ArrayList<String> al;
 		al = new ArrayList<String>();
 
