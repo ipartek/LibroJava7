@@ -4,7 +4,7 @@ public class Persona {
 
 	private String nombre;
 
-	public Persona(String nombre) {
+	public Persona(int i, String nombre) {
 		super();
 		this.nombre = nombre;
 	}
