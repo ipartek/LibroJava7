@@ -1,28 +1,30 @@
 package com.ipartek.formacion.mikelcuenca.ejemplopoo.tipos;
 
-import java.util.Date;
-
 public class Persona {
-
-	private int id;
+	
 	private String nombre;
-	private Date d;
-
+	private int edad;
+	
 	public Persona() {
-		this(0, "Anónimo");
+		this("Anónimo", 18);
 	}
 
-	public Persona(int id, String nombre) {
-		setId(id);
+	public Persona(String nombre) {
+		setEdad(18);
 		setNombre(nombre);
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public Persona(String nombre, int edad) {
+		setEdad(edad);
+		setNombre(nombre);
 	}
 
-	public int getId() {
-		return id;
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public int getEdad() {
+		return edad;
 	}
 
 	public void setNombre(String nombre) {
@@ -33,17 +35,8 @@ public class Persona {
 		return nombre;
 	}
 
-	public void setFechaNacimiento(Date d) {
-		this.d = d;
-
-	}
-
-	public Date getFechaNacimiento() {
-		return d;
-	}
-
-	public String aTexto() {
-		return (String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY", getId(), getNombre(), getFechaNacimiento()));
+	public String toString() {
+		return (String.format("%s", getNombre()));
 	}
 
 }
