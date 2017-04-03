@@ -8,9 +8,9 @@ import java.util.Iterator;
 
 public class Colecciones {
 	public static void main(String[] args) {
-		// ejemploArrayList();
+		ejemploArrayList();
 		// ejemploHastSet();
-		ejemploHashMap();
+		// ejemploHashMap();
 	}
 
 	private static void ejemploHashMap() {
