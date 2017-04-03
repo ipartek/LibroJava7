@@ -54,6 +54,7 @@ public class Carrito {
 	public Double getPrecioTotal() {
 		
 		for (int i = 0; i < aProductos.size(); i++) {
+			//
 			//precioTotal += producto.;
 		}
 		
