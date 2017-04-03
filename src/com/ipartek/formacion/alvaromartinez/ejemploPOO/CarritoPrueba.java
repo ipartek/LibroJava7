@@ -1,9 +1,12 @@
-package com.ipartek.formacion.javierlete.ejemplopoo.programa;
+package com.ipartek.formacion.alvaromartinez.ejemploPOO;
+
+import com.ipartek.formacion.alvaromartinez.ejemploPOO.tipos.Carrito;
+import com.ipartek.formacion.alvaromartinez.ejemploPOO.tipos.Producto;
 
 public class CarritoPrueba {
 
 	public static void main(String[] args) {
-		Producto c = new Producto();
+		Carrito c = new Carrito();
 
 		c.add(new Producto(1, "Monitor 21\"", 125.03));
 		c.add(new Producto(2, "Placa base ...", 100.2));
