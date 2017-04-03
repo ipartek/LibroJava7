@@ -61,6 +61,10 @@ public class Persona {
 		return String.format("ID: %d, Nombre: %s, Fecha de nacimiento: %3$te-%3$tm-%3$tY"
 				,getId(), getNombre(), getFechaNacimiento());
 	}
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", fecha=" + fecha + "]";
+	}
 	
 	
 	
