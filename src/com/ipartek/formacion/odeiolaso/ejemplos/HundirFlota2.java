@@ -13,32 +13,31 @@ public class HundirFlota2 {
 
 	static boolean tabla = false, winner = false, disparo = false;
 
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 	public static void main(String[] args) throws IOException {
-
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
 		for (int i = 0; winner; i++)
 			if (i == 0)
 				crearFlout();
 			else
 				hundirFlout();
 
-		pillarTexto();
+		// pillarTexto();
 	}
 
 	private static void forForFlout() {
 
 	}
 
-	private static void crearFlout() {
+	private static void crearFlout() throws IOException {
 
-		pillarTexto(" Itroduce numero de filas: ", " Itroduce numero de columnas:", "NO ES UN NUMERO");
+		pillarTexto(" Itroduce numero de filas: ", " Itroduce numero de columnas:", columnas, "NO ES UN NUMERO");
 
 		forForFlout();
 
 	}
 
-	private static void pillarTexto(String filas, String columnas, String noNumerico) {
+	private static void pillarTexto(String filas, String string, int columnas, String noNumerico) throws IOException {
 		boolean textoCapturado = false;
 
 		do {
