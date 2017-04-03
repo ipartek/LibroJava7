@@ -13,6 +13,13 @@ public class Persona {
 		this(0, "Anonnimo");
 	}
 
+	public Persona(String nombre) {
+		super();
+		this.nombre = nombre;
+
+		setId(id);
+	}
+
 	public Persona(int id, String nombre) {
 
 		setId(id);
@@ -50,4 +57,15 @@ public class Persona {
 
 		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMINETO: %d-%d-%d", getId(), getNombre(), getFechaNacimiento().getDate(), getFechaNacimiento().getMonth(), getFechaNacimiento().getYear());
 	}
+
+	@Override
+	public String toString() {
+		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
+	}
+
+	public void add(Persona persona) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
