@@ -52,7 +52,7 @@ public class Persona {
 	// To String
 	@Override
 	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]\n";
+		return "Persona :[id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]\n";
 	}
 
 }

@@ -7,7 +7,7 @@ public class PruebaEmpresa {
 		iberdrola = new Empresa("Iberdrola", new Persona(1, "Daniel Sanchez"));
 
 		Persona director = new Persona(1, "Daniel Sanchez");
-		iberdrola = new Empresa("Iberdrola", director);
+		// iberdrola = new Empresa("Iberdrola", director);
 
 		// System.out.println(iberdrola);
 

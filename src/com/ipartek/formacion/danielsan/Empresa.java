@@ -39,7 +39,7 @@ public class Empresa {
 	// To String
 	@Override
 	public String toString() {
-		return "Empresa : nombre=" + nombre + ", DirectorSiNo=" + DirectorSiNo + ", \nJunta=" + Arrays.toString(Junta) + " \nDirector=" + Director + "Personas:" + Personas;
+		return "Empresa : nombre=" + nombre + ", DirectorSiNo=" + DirectorSiNo + ", \nJunta : \n" + Arrays.toString(Junta) + " \nDirector=" + Director + "Personas:" + Personas;
 	}
 
 	public void setPersonaJunta(Persona persona, int posicion) {
