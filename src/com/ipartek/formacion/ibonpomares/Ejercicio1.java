@@ -43,6 +43,8 @@ public class Ejercicio1 {
 			System.out.printf(UF[i] + " - ");
 			System.out.println(notas[i]);
 		}
+		
+		
 		System.out.println("-------------------------");
 		// Nota media
 		for (int i = 0; i < notas.length; i++) {
