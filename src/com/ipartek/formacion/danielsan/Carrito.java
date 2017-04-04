@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Carrito {
 	private ArrayList<Producto> Producto = new ArrayList<Producto>();
+	private final double IVA=0.21;
 
 	//Constructores
 	public Carrito(ArrayList<com.ipartek.formacion.danielsan.Producto> producto) {
@@ -38,12 +39,15 @@ public class Carrito {
 	}
 	public double getIvaSobrePrecioTotal(){
 		double Precio=getPrecioTotal();
-		return Precio*0.21;
+		return Precio*IVA;
 	}
 	public double getPrecioTotalConIva(){
 		double Precio=getPrecioTotal();
-		Precio=Precio+(Precio*0.21);
+		Precio=Precio+(Precio*IVA);
 		return Precio;
+	}
+	public void add (Producto producto)  {
+		getProducto().add(producto);
 	}
 	
 	//ToString

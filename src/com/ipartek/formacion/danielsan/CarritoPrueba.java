@@ -5,10 +5,10 @@ public class CarritoPrueba {
 	public static void main(String[] args) {
 		
 		Carrito c = new Carrito();
-		Producto Producto;
-		c.getProducto().add(new Producto(1, "Moitor 21\"", 125.03));
-		c.getProducto().add(new Producto(2, "Placa base...", 100.2));
-		c.getProducto().add(new Producto(3, "Raton", 10.3));
+		
+		c.add(new Producto(1, "Moitor 21\"", 125.03));
+		c.add(new Producto(2, "Placa base...", 100.2));
+		c.add(new Producto(3, "Raton", 10.3));
 		
 		System.out.println(c);
 
