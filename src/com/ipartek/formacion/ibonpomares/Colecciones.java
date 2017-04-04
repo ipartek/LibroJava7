@@ -84,7 +84,7 @@ public class Colecciones {
 		
 	
 		private static void ejemploHasSet() {
-			
+//se utiliza para NO duplicados			
 			HashSet<String> hs = new HashSet<String>();
 		
 			hs.add("Primero");

@@ -2,10 +2,11 @@ package com.ipartek.formacion.ibonpomares.ejemplopoo.tipos;
 
 public class Producto {
 
+	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
 	
 	private int id;
 	private String nombre;
-	private Double precio;
+	private double precio;
 	
 	
 	
@@ -15,9 +16,9 @@ public class Producto {
 		
 	}
 	
-	public Producto(int id, String nombre, Double precio) {
+	public Producto(int id, String nombre, double precio) {
 		super();
-		this.id = 0;
+		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
 	}
@@ -34,20 +35,28 @@ public class Producto {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Double getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
-	public void setPrecio(Double precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + "]";
+		//return String.format("\nProducto Id= " + id + ", Nombre= " + nombre + ", Precio= " + precio + " €");
+		return toString(SIN_FORMATO);
 	}
 	
+	public String toString(boolean conFormato) {
+		if(conFormato){
+		return String.format("Id: %3d, %-30s %10.2f", id , nombre, precio);
+		}else{
+			return "\n Id= " + id + ", Nombre= " + nombre + ", Precio= " + precio + " €";
+		}		
 	
+	}	
 	
 	
 	
