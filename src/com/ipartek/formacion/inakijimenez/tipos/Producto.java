@@ -39,7 +39,16 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "ID:" + id + "\t" + nombre + "\t" + precio + "€\n";
+		// return "ID:" + id + "\t" + nombre + "\t" + precio + "€\n";
+		return toString(false);
 	}
 
+	public String toString(boolean conFormato) {
+		if (conFormato) {
+			return String.format("ID: %5d %-50s %10.2f\n", id, nombre, precio);
+		} else {
+			return String.format("ID: %d %s %10.2f\n", id, nombre, precio);
+		}
+
+	}
 }

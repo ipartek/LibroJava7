@@ -12,9 +12,13 @@ public class Carrito {
 
 	@Override
 	public String toString() {
+		return toString(false);
+	}
+
+	public String toString(boolean conFormato) {
 		String carro = "";
 		for (Producto producto : carrito) {
-			carro = carro + producto.toString();
+			carro = carro + producto.toString(conFormato);
 		}
 		return "Carrito\n" + carro;
 	}

@@ -14,6 +14,7 @@ public class CarritoPrueba {
 		c.add(new Producto(3, "Raton", 10.3));
 
 		System.out.println(c);
+		System.out.println(c.toString(true));
 
 		/*
 		 * ID: 1, Monitor: 21", 125.03€ ....
