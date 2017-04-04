@@ -50,7 +50,8 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return "Producto [ id=" + id + ", articulo=" + articulo + ", precio=" + precio + " € ]";
+		// return "ID:" + id + ",\t " + articulo + ",\t " + precio + "€";
+		return String.format("ID:%5d %25s %10.2f€", id, articulo, precio);
 	}
 
 }
