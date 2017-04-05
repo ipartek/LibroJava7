@@ -13,7 +13,7 @@ public class cocheTestChapucero {
 
 		ferrari.setNuevo(false);
 		ferrari.setPotencia(900);
-		System.out.println(ferrari.toString());
+		// System.out.println(ferrari.toString());
 
 	}
 
