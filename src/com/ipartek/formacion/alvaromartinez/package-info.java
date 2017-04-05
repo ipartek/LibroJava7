@@ -3,7 +3,7 @@
  */
 /**
  * @author Álvaro
- * Álvaro Martínez
+ * Álvaro Martínez Albalá
  *
  */
 package com.ipartek.formacion.alvaromartinez;

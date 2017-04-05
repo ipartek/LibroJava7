@@ -13,8 +13,6 @@ public class CarritoPrueba {
 		c.add(new Producto(3, "Ratón", 10.3));
 
 		System.out.println("ZALLA INFORMÁTICA");
-		// System.out.println("Número de artículos = " +
-		// c.getNumeroDeArticulos() + "\n");
 		System.out.println(String.format("Número de artículos = %d", c.getNumeroDeArticulos()));
 
 		System.out.println(c);
