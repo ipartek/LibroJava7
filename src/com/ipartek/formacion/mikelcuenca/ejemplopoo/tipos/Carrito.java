@@ -5,30 +5,33 @@ import java.util.ArrayList;
 public class Carrito {
 
 	private ArrayList<Producto> contenido;
-	private final double IVA = 0.21;
+	private final static double IVA = 0.21;
 
 	public Carrito() {
 
 		this.contenido = new ArrayList<Producto>();
+
 	}
 
 	public int getNumeroDeArticulos() {
 
-		int n = 0;
+		// int n = 0;
+		//
+		// for (Producto p : contenido) {
+		//
+		// n++;
+		//
+		// }
 
-		for (Producto p : contenido) {
+		// return n;
 
-			n++;
-
-		}
-
-		return n;
+		return contenido.size();
 
 	}
 
-	public double getPrecioTotal() {
+	public double getPrecioTotalVerdadero() {
 
-		double precioTotal = 0;
+		double precioTotal = 0.0;
 
 		for (Producto p : contenido) {
 
@@ -40,15 +43,19 @@ public class Carrito {
 
 	}
 
-	public double getIvaSobrePrecioTotal() {
+	public String getPrecioTotal() {
+		return String.format("%.2f€", getPrecioTotalVerdadero());
+	}
 
-		return getPrecioTotal() * IVA;
+	public String getIvaSobrePrecioTotal() {
+
+		return String.format("%.2f€", getPrecioTotalVerdadero() * IVA);
 
 	}
 
-	public double getPrecioTotalConIva() {
+	public String getPrecioTotalConIva() {
 
-		return getPrecioTotal() * (1 + IVA);
+		return String.format("%.2f€", getPrecioTotalVerdadero() * (1 + IVA));
 
 	}
 
@@ -59,12 +66,17 @@ public class Carrito {
 
 	public String toString() {
 
-		String texto = "";
+		StringBuffer sb = new StringBuffer();
+		// String texto = "";
 
-		for (Producto p : contenido)
-			texto = texto + p.toString() + "\n";
-
-		return texto;
+		for (Producto p : contenido) {
+			sb.append(p);
+			sb.append('\n');
+			// texto = texto + p.toString() + "\n";
+			// texto = new StringBuffer().append(texto).append(p.toString()).append("\n").toString();
+		}
+		return sb.toString();
+		// return texto;
 
 	}
 

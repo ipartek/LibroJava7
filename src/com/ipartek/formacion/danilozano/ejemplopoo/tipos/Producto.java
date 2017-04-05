@@ -1,17 +1,23 @@
-package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
+package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 
 public class Producto {
 	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
-
 	private int id;
 	private String nombre;
 	private double precio;
-
-	public static final int ANCHO_ID = 5, ANCHO_NOMBRE = 50, ANCHO_PRECIO = 10;
+	public static final int ANCHO_ID = 5, ANCHO_NOMBRE = 50, ANCHO_PRECIO = 1;
 
 	@Override
 	public String toString() {
 		return toString(SIN_FORMATO);
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 
 	public String toString(boolean conFormato) {
@@ -26,10 +32,6 @@ public class Producto {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
-	}
-
-	public double getPrecio() {
-		return precio;
 	}
 
 }
