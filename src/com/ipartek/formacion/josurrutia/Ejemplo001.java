@@ -25,6 +25,7 @@ public class Ejemplo001 {
 
 	}
 
+	@SuppressWarnings("unused")
 	private static void coleccionesJava5() {
 		ArrayList<String> a1 = new ArrayList<String>();
 
