@@ -3,6 +3,7 @@ package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 import java.util.ArrayList;
 
 public class Carrito {
+	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
 
 	private ArrayList<Producto> productos = new ArrayList<Producto>();
 
@@ -12,36 +13,61 @@ public class Carrito {
 
 	@Override
 	public String toString() {
-		return toString(false);
+		return toString(SIN_FORMATO);
 	}
 
 	public String toString(boolean conFormato) {
+		StringBuffer sb = new StringBuffer(); // String s = "";
+
+		for (Producto p : productos) {
+			sb.append(p.toString(conFormato));
+			sb.append('\n');
+
+			// s = new StringBuffer().append(s).append(p.toString(conFormato)).append("\n").toString();
+			// s = s + p.toString(conFormato) + "\n";
+			// s += p.toString(conFormato) + "\n";
+		}
+
+		return sb.toString(); // return s; // productos.toString();
+	}
+
+	public String toStringCutre(boolean conFormato) {
 		String s = "";
 
 		for (Producto p : productos)
 			s = s + p.toString(conFormato) + "\n";
 
-		return s; // productos.toString();
+		return s;
 	}
 
-	public char[] getNumeroDeArticulos() {
-		// TODO Auto-generated method stub
-		return null;
+	public int getNumeroDeArticulos() {
+		return productos.size();
 	}
 
-	public char[] getPrecioTotal() {
-		// TODO Auto-generated method stub
-		return null;
+	public double getPrecioTotal() {
+		double precioTotal = 0.0;
+
+		for (Producto p : productos)
+			precioTotal += p.getPrecio();
+
+		return precioTotal;
 	}
 
-	public char[] getIvaSobrePrecioTotal() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getPrecioTotal(int decimales) {
+		return String.format("%." + decimales + "f", getPrecioTotal());
 	}
 
-	public char[] getPrecioTotalConIva() {
-		// TODO Auto-generated method stub
-		return null;
+	public final static double IVA = 0.21;
+
+	public double getIvaSobrePrecioTotal() {
+		return getPrecioTotal() * IVA;
+	}
+
+	public double getPrecioTotalConIva() {
+
+		// return getPrecioTotal() + getIvaSobrePrecioTotal();
+
+		return getPrecioTotal() * (IVA + 1);
 	}
 
 }

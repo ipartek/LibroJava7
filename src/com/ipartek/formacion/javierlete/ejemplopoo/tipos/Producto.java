@@ -1,6 +1,7 @@
 package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 
 public class Producto {
+	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
 
 	private int id;
 	private String nombre;
@@ -10,7 +11,7 @@ public class Producto {
 
 	@Override
 	public String toString() {
-		return toString(false);
+		return toString(SIN_FORMATO);
 	}
 
 	public String toString(boolean conFormato) {
@@ -25,6 +26,10 @@ public class Producto {
 		this.id = id;
 		this.nombre = nombre;
 		this.precio = precio;
+	}
+
+	public double getPrecio() {
+		return precio;
 	}
 
 }
