@@ -13,14 +13,14 @@ public class PuntoPrueba {
 		pt1 = new Punto(leerNumero("Introduce la x: "), leerNumero("Introduce la y: "));
 		Punto pt2 = new Punto();
 
-		pt2.setXdouble(leerNumero("Introduce la x: ")); // pt1.x = 5;
-		pt2.setYdouble(leerNumero("Introduce la y: ")); // pt1.y = 7;
+		pt2.setXDouble(leerNumero("Introduce la x: ")); // pt1.x = 5;
+		pt2.setYDouble(leerNumero("Introduce la y: ")); // pt1.y = 7;
 
 		System.out.println(pt1.getX());
 		System.out.println(pt2.getY());
 		System.out.println(pt1.getX());
 		System.out.println(String.format("pt1(%d,%d)", pt1.getX(), pt1.getY()));
-		System.out.printf("pt2(%.2f,%.2f)", pt2.getXdouble(), pt2.getYdouble());
+		System.out.printf("pt2(%.2f,%.2f)", pt2.getXDouble(), pt2.getYDouble());
 
 	}
 
