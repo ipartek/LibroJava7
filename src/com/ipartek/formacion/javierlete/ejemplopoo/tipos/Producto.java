@@ -1,11 +1,15 @@
 package com.ipartek.formacion.javierlete.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 public class Producto {
 	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
 
 	private int id;
 	private String nombre;
 	private double precio;
+
+	private BigDecimal precioSeguro;
 
 	public static final int ANCHO_ID = 5, ANCHO_NOMBRE = 50, ANCHO_PRECIO = 10;
 
@@ -25,11 +29,28 @@ public class Producto {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.precio = precio;
+		setPrecio(precio);
 	}
 
 	public double getPrecio() {
 		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+		setPrecioSeguro(new BigDecimal(String.format("%.2f", precio).replace(',', '.')));
+		// String textoPrecio = String.format("%.2f", precio);
+		// textoPrecio = textoPrecio.replace(',', '.');
+		// BigDecimal bdPrecio = new BigDecimal(textoPrecio);
+		// setPrecioSeguro(bdPrecio);
+	}
+
+	public BigDecimal getPrecioSeguro() {
+		return precioSeguro;
+	}
+
+	public void setPrecioSeguro(BigDecimal precioSeguro) {
+		this.precioSeguro = precioSeguro;
 	}
 
 }
