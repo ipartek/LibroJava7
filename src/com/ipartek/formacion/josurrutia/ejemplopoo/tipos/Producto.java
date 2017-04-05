@@ -1,5 +1,7 @@
 package com.ipartek.formacion.josurrutia.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 public class Producto {
 
 	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
@@ -7,6 +9,8 @@ public class Producto {
 	private int id;
 	private String nombre;
 	private double precio;
+
+	private BigDecimal precioSeguro;
 
 	public static final int ANCHO_ID = 3, ANCHO_NOMBRE = 20, ANCHO_PRECIO = 10;
 
@@ -29,23 +33,7 @@ public class Producto {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.precio = precio;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		setPrecio(precio);
 	}
 
 	public double getPrecio() {
@@ -54,6 +42,21 @@ public class Producto {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+		// setPrecioSeguro(new BigDecimal(String.format("%.2f", precio)));
+		String textoPrecio = String.format("%.2f", precio);
+		textoPrecio = textoPrecio.replace(',', '.');
+		BigDecimal bdPrecio = new BigDecimal(textoPrecio);
+		setPrecioSeguro(bdPrecio);
+
+	}
+
+	private void setPrecioSeguro(BigDecimal bigDecimal) {
+		this.precioSeguro = bigDecimal;
+
+	}
+
+	public BigDecimal getPrecioSeguro() {
+		return precioSeguro;
 	}
 
 }

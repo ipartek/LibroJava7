@@ -4,6 +4,7 @@ import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Empresa;
 import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Persona;
 
 public class EmpresaPrueba {
+
 	public static void main(String[] args) {
 
 		Empresa ipartek;

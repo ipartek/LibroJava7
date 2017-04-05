@@ -1,5 +1,6 @@
 package com.ipartek.formacion.josurrutia.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Carrito {
@@ -25,7 +26,7 @@ public class Carrito {
 
 		for (Producto p : productos) {
 			sb.append(p.toString(conFormato));
-			sb.append(0);
+			// sb.append(0);
 		}
 		// s = new StringBuffer().append(s).append(p.toString(conFormato)).append("\n").toString();
 		// s = s + p.toString(conFormato) + "\n";
@@ -48,6 +49,15 @@ public class Carrito {
 
 	public String getPrecioTotal(int decimales) {
 		return String.format("%." + decimales + "f", getPrecioTotal());
+	}
+
+	public BigDecimal getPrecioTotalSeguro() {
+		BigDecimal precioTotal = new BigDecimal(0.0);
+
+		for (Producto p : productos) {
+			precioTotal = precioTotal.add(p.getPrecioSeguro());
+		}
+		return precioTotal;
 	}
 
 	public final static double IVA = 0.21;

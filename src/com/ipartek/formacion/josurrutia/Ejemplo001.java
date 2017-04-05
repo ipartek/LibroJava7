@@ -25,7 +25,6 @@ public class Ejemplo001 {
 
 	}
 
-	@SuppressWarnings("unused")
 	private static void coleccionesJava5() {
 		ArrayList<String> a1 = new ArrayList<String>();
 
@@ -39,8 +38,9 @@ public class Ejemplo001 {
 		String s = a1.get(1);
 	}
 
-	@SuppressWarnings({ "unused", "unchecked", "rawtypes" })
+	@SuppressWarnings({ "unused", "unchecked" })
 	private static void coleciones() {
+		@SuppressWarnings("rawtypes")
 		Vector v = new Vector();
 
 		v.add("HOLA");
