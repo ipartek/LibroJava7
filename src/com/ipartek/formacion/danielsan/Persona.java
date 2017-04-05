@@ -36,6 +36,7 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
+	@SuppressWarnings("deprecation")
 	public String aTexto() {
 
 		// return

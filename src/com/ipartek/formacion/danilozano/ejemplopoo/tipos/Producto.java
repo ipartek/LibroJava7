@@ -1,15 +1,19 @@
 package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 public class Producto {
 	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
 	private int id;
 	private String nombre;
 	private double precio;
+	private BigDecimal precioseguro;
+
 	public static final int ANCHO_ID = 5, ANCHO_NOMBRE = 50, ANCHO_PRECIO = 1;
 
 	@Override
 	public String toString() {
-		return toString(SIN_FORMATO);
+		return "Producto [precioseguro=" + precioseguro + "]";
 	}
 
 	public double getPrecio() {
@@ -18,6 +22,7 @@ public class Producto {
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
+		setPrecioseguro(new BigDecimal(String.format("%.2f", precio).replace(',', '.')));
 	}
 
 	public String toString(boolean conFormato) {
@@ -31,7 +36,15 @@ public class Producto {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.precio = precio;
+		setPrecio(precio);
+	}
+
+	public BigDecimal getPrecioseguro() {
+		return precioseguro;
+	}
+
+	public void setPrecioseguro(BigDecimal precioseguro) {
+		this.precioseguro = precioseguro;
 	}
 
 }

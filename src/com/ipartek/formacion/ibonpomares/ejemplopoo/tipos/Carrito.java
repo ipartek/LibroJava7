@@ -1,5 +1,6 @@
 package com.ipartek.formacion.ibonpomares.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -52,19 +53,28 @@ public class Carrito {
 //		
 //		this.producto = producto;
 //	}
+public BigDecimal getPrecioTotalSeguro() {
+		BigDecimal precioTotal = new BigDecimal(0.0);
 
-	
+			for(Producto p : aProductos) {
+				precioTotal = precioTotal.add(p.getPrecioSeguro());
+			
+				
+			}return precioTotal;
+	}
+
 	public double getPrecioTotal() {
 		
-		for (int i = 0; i <= aProductos.size(); i++) {
-			
+		//for (int i = 0; i <= aProductos.size(); i++) {
+			precioTotal = 0;
 			for(Producto p : aProductos) {
 				precioTotal +=  p.getPrecio();
 			
-			}
-		
-		}return precioTotal;
+			}return precioTotal;
 	}
+		
+		
+	
 	
 	public String getPrecioTotal(int decimales){
 		return String.format("%."+ decimales + "f",getPrecioTotal());
@@ -78,7 +88,7 @@ public class Carrito {
 	public double getIvaSobrePrecioTotal() {
 		
 		
-		return getPrecioTotal() * IVA;
+		return getPrecioTotal() * (IVA);
 	}
 
 	public void setIvaSobrePrecioTotal(double ivaSobrePrecioTotal) {

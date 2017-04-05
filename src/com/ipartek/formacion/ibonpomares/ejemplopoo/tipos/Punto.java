@@ -12,10 +12,12 @@ public class Punto {
 		this.y = y;
 		//setX(x);
 		//setY(y);
+		System.out.println("Se ha creado un objeto");
 	}
 //p1
 	public Punto (int x, int y){
 		this((double) x , (double) y);
+		
 		
 	}
 //p3	

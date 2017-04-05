@@ -6,6 +6,8 @@ public class Punto {
 	public Punto(double x, double y) {
 		setX(x);
 		setY(y);
+
+		System.out.println("Se ha creado el objeto");
 	}
 
 	public Punto(int x, int y) {
@@ -22,7 +24,6 @@ public class Punto {
 
 	public void setX(int x) {
 		this.x = (double) x;
-
 	}
 
 	public int getY() {
