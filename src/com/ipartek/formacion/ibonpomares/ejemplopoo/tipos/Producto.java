@@ -1,5 +1,7 @@
 package com.ipartek.formacion.ibonpomares.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
+
 public class Producto {
 
 	public final static boolean CON_FORMATO = true, SIN_FORMATO = false;
@@ -8,9 +10,17 @@ public class Producto {
 	private String nombre;
 	private double precio;
 	
+	private BigDecimal precioSeguro;
 	
 	
-	
+	public BigDecimal getPrecioSeguro() {
+		return precioSeguro;
+	}
+
+	public void setPrecioSeguro(BigDecimal precioSeguro) {
+		this.precioSeguro = precioSeguro;
+	}
+
 	public Producto() {
 		super();
 		
@@ -20,7 +30,7 @@ public class Producto {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.precio = precio;
+		setPrecio(precio);
 	}
 	
 	public int getId() {
@@ -40,6 +50,11 @@ public class Producto {
 	}
 	public void setPrecio(double precio) {
 		this.precio = precio;
+		setPrecioSeguro(new BigDecimal(precio));
+		String textoPrecio = String.format("%.2f", precio);
+		textoPrecio = textoPrecio.replace(',','.');
+		BigDecimal bdPrecio = new BigDecimal(textoPrecio);
+		setPrecioSeguro(bdPrecio);
 	}
 	
 	
