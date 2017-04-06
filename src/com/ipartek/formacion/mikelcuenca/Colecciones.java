@@ -17,6 +17,7 @@ public class Colecciones {
 
 	// ARRAYLIST
 
+	@SuppressWarnings("unused")
 	private static void ejemploArrayList() {
 		ArrayList<String> al;
 		al = new ArrayList<String>();
@@ -53,6 +54,7 @@ public class Colecciones {
 
 	// HASHSET
 
+	@SuppressWarnings("unused")
 	private static void ejemploHashSet() {
 
 		HashSet<String> hs = new HashSet<String>();

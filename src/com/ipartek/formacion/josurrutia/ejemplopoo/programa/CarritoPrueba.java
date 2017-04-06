@@ -1,5 +1,7 @@
 package com.ipartek.formacion.josurrutia.ejemplopoo.programa;
 
+import java.math.BigDecimal;
+
 import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Carrito;
 import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Producto;
 
@@ -14,11 +16,11 @@ public class CarritoPrueba {
 		c.add(new Producto(3, "Ratón", 10.3));
 
 		for (int id = 1; id <= 50; id++) {
-			c.add(new Producto(id, "Producto" + id, id * 2 * Math.random()));
+			c.add(new Producto(id, "Producto" + id, 20.10));
 		}
 		System.out.println("\tSin Formato \n" + c);
 
-		System.out.println("\tCon Formato \n" + c.toString(Carrito.CON_FORMATO));
+		System.out.println("\n\tCon Formato \n" + c.toString(Carrito.CON_FORMATO));
 
 		/*
 		 * ID: 1, Monitor 21", 125.03€ ...
@@ -26,8 +28,15 @@ public class CarritoPrueba {
 
 		System.out.println(c.getNumeroDeArticulos());
 		System.out.println(c.getPrecioTotal());
+
+		System.out.println(c.getPrecioTotalSeguro());
+
 		System.out.println(c.getPrecioTotal(3));
 		System.out.println(c.getIvaSobrePrecioTotal()); // Asumimos IVA 21%
 		System.out.println(c.getPrecioTotalConIva());
+
+		double precio = 125.03;
+		BigDecimal precioNuevo = new BigDecimal(125.03);
+
 	}
 }

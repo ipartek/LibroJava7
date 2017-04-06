@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author JAVA
- *
- */
-package Ejemplopoo;

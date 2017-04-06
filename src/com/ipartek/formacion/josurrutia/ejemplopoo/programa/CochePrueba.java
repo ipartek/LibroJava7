@@ -4,6 +4,7 @@ import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Coche;
 import com.ipartek.formacion.josurrutia.ejemplopoo.tipos.Rueda;
 
 public class CochePrueba {
+
 	public static void main(String[] args) {
 		Coche coche = new Coche();
 		Rueda[] ruedas = new Rueda[4];

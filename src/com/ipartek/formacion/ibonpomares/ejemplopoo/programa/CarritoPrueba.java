@@ -1,5 +1,6 @@
 package com.ipartek.formacion.ibonpomares.ejemplopoo.programa;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.ipartek.formacion.ibonpomares.ejemplopoo.tipos.Carrito;
@@ -13,7 +14,7 @@ public class CarritoPrueba {
 		
 		Carrito c = new Carrito();
 		
-		c.add(new Producto(1, "Monitor 21\"", 125.03));
+//		c.add(new Producto(1, "Monitor 21\"", 125.03));
 //		c.add(new Producto(2, "Placa Base", 100.2));
 //		c.add(new Producto(3, "Raton", 10.3));
 //		c.add(new Producto(4, "Teclado", 15));
@@ -21,7 +22,7 @@ public class CarritoPrueba {
 		//generar simulacion de productos
 		for (int id = 1; id <= 50; id++) {
 			//c.add(new Producto(id, "Producto"+ id, id * 2 * Math.random()));
-			c.add(new Producto(id, "Producto"+ id, 20 ));
+			c.add(new Producto(id, "Producto"+ id, 20.1 ));
 			
 		}
 		
@@ -42,12 +43,19 @@ public class CarritoPrueba {
 		 */
 		
 		System.out.println("Numero De Articulos: " + c.getNumeroDeArticulos());
-		System.out.println("Precio Total: " + c.getPrecioTotal(2));
+		System.out.println("Precio Total: " + c.getPrecioTotal());	
+		
+		System.out.println("Precio total Seguro: " + c.getPrecioTotalSeguro());
+		
+		System.out.println("Precio Total (Decimales): " + c.getPrecioTotal(2));
 		System.out.println("IVA Sobre Precio Total: " + c.getIvaSobrePrecioTotal()); //Asumimos IVA 21%
 		System.out.println("Precio Total Con IVA: " + c.getPrecioTotalConIva());
 		
 		
-		
+//		double precio = 125.03;
+//		BigDecimal precioNuevo = new BigDecimal(125.03);
+//	
+			
 		
 	}
 
