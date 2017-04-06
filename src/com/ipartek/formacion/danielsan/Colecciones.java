@@ -9,11 +9,10 @@ import java.util.Iterator;
 public class Colecciones {
 	public static void main(String[] args) {
 		ejemploArrayList();
-		// ejemploHastSet(); //Para que no haya duplicados
-		// ejemploHashMap(); //Para que haya un indice
+		ejemploHastSet(); // Para que no haya duplicados
+		ejemploHashMap(); // Para que haya un indice
 	}
 
-	@SuppressWarnings("unused")
 	private static void ejemploHashMap() {
 		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 
@@ -81,7 +80,6 @@ public class Colecciones {
 		}
 	}
 
-	@SuppressWarnings("unused")
 	private static void ejemploHastSet() {
 		HashSet<String> hs = new HashSet<>();
 		hs.add("Uno");
