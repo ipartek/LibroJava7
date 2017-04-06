@@ -41,6 +41,7 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
+	@SuppressWarnings("deprecation")
 	public String aTexto() {
 
 		// return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY",

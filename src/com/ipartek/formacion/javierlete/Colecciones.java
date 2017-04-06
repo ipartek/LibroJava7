@@ -76,6 +76,7 @@ public class Colecciones {
 
 	}
 
+	@SuppressWarnings("unused")
 	private static void ejemploHashSet() {
 		HashSet<String> hs = new HashSet<String>();
 
