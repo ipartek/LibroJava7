@@ -1,4 +1,4 @@
-package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
+package com.ipartek.formacion.danielsan;
 
 public class Punto {
 	private double x, y;
@@ -48,5 +48,10 @@ public class Punto {
 
 	public void setY(double y) {
 		this.y = y;
+	}
+
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
 	}
 }
