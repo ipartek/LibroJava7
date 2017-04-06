@@ -82,4 +82,16 @@ public class Empresa {
 
 	}
 
+	public Empresa() {
+		super();
+		this.nombreEmpresa = "SIN NOMBRE";
+		this.director = new Persona();
+	}
+
+	public static double getTotalSueldoBruto() {
+		
+		for(  ){
+			
+		}
+	}
 }
