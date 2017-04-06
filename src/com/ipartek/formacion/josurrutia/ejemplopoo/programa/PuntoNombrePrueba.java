@@ -35,6 +35,7 @@ public class PuntoNombrePrueba {
 		System.out.println(((PuntoNombre) p).getNombre());
 
 		Punto pt = new Punto();
+		@SuppressWarnings("unused")
 		PuntoNombre ptn3;
 		// ptn3 = (PuntoNombre) pt;
 
