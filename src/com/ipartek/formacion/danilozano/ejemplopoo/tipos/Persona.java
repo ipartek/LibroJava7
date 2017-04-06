@@ -3,14 +3,14 @@ package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 import java.util.Date;
 
 public class Persona {
-	private int id;
-	private String nombre;
-	private Date fechaNacimiento;
-
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
+
+	private int id;
+	private String nombre;
+	private Date fechaNacimiento;
 
 	public Persona(int id, String nombre) {
 		setId(id);
@@ -41,6 +41,7 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
+	@SuppressWarnings("deprecation")
 	public String aTexto() {
 
 		// return
