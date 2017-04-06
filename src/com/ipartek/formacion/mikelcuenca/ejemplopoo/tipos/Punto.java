@@ -5,8 +5,12 @@ public class Punto {
 	private double x, y;
 
 	public Punto(double x, double y) { // constructor
-		setXdouble(x);
-		setYdouble(y);
+		setXDouble(x);
+		setYDouble(y);
+	}
+
+	public Punto(int x, int y) {
+		this((double) x, (double) y);
 	}
 
 	public Punto() { // otra version del constructor
@@ -31,19 +35,19 @@ public class Punto {
 		this.y = y;
 	}
 
-	public double getXdouble() {
+	public double getXDouble() {
 		return x;
 	}
 
-	public double getYdouble() {
+	public double getYDouble() {
 		return y;
 	}
 
-	public void setYdouble(double y) {
+	public void setYDouble(double y) {
 		this.y = (double) y;
 	}
 
-	public void setXdouble(double x) {
+	public void setXDouble(double x) {
 		this.x = (double) x;
 	}
 
