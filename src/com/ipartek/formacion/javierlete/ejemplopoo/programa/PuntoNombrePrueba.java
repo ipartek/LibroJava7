@@ -44,6 +44,21 @@ public class PuntoNombrePrueba {
 		// System.out.println((PuntoNombre)p.getNombre());
 
 		System.out.println(((PuntoNombre) p).getNombre());
+
+		Object o = ptn;
+
+		System.out.println(ptn instanceof Object); // SIEMPRE ES TRUE
+
+		// System.out.println(o.toString());
+		// System.out.println(ptn.toString());
+		System.out.println(o);
+		System.out.println(ptn);
+
+		Object otro = new Punto(1, 2);
+		System.out.println(otro);
+
+		otro = new PuntoNombre();
+		System.out.println(otro);
 	}
 
 }
