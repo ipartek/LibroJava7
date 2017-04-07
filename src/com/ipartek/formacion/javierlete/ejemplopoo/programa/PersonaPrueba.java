@@ -6,6 +6,7 @@ import com.ipartek.formacion.javierlete.ejemplopoo.tipos.Persona;
 
 public class PersonaPrueba {
 
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// PRIMERO
 		Persona p1 = new Persona();

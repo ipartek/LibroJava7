@@ -25,6 +25,7 @@ public class Ejemplo001 {
 	}
 
 	private static void fechas() {
+		@SuppressWarnings("deprecation")
 		Date d = new Date("1582/10/05");
 		System.out.println(d);
 	}

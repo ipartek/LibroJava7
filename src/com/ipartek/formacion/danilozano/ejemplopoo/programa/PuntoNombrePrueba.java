@@ -8,8 +8,8 @@ public class PuntoNombrePrueba {
 	public static void main(String[] args) {
 		// Herencias
 
-		PuntoNombre ptn;// deja crear variable de la clase con herencia
-		ptn = new PuntoNombre();// deja crear un objeto con un constructor
+		PuntoNombre ptn;// deja declarar variable de la clase con herencia
+		ptn = new PuntoNombre();// deja crear una variable
 
 		System.out.println(ptn);
 

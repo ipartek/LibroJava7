@@ -35,8 +35,7 @@ public class CarritoPrueba {
 		System.out.println(c.getIvaSobrePrecioTotal()); // Asumimos IVA 21%
 		System.out.println(c.getPrecioTotalConIva());
 
-		double precio = 125.03;
-		BigDecimal precioNuevo = new BigDecimal(125.03);
+		new BigDecimal(125.03);
 
 	}
 }

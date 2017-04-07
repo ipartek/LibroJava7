@@ -6,22 +6,15 @@ import java.util.Arrays;
 public class Empresa {
 	private String nombre;
 	private Persona director;
-	private Persona[] junta = new Persona[5];// array de la junta de 5 personas
-	private ArrayList<Persona> personas = new ArrayList<Persona>(); // array
-																	// para las
-																	// personas
-																	// que
-																	// puedan
-																	// entrar
+	private Persona[] junta = new Persona[5];
+	private ArrayList<Persona> personas = new ArrayList<Persona>();
 
-	// constructores
-	public Empresa(String nombre, com.ipartek.formacion.danilozano.Persona director2) {
+	public Empresa(String nombre, Persona director) {
 		super();
 		this.nombre = nombre;
 		this.director = director;
 	}
 
-	// getters y setters
 	public Persona getDirector() {
 		return director;
 	}
@@ -30,10 +23,20 @@ public class Empresa {
 		this.director = director;
 	}
 
-	// otras funciones
 	@Override
 	public String toString() {
 		return "Empresa [nombre=" + nombre + ", director=" + director + ", junta=" + Arrays.toString(junta) + ", personas=" + personas + "]";
 	}
 
+	public void setPersonaJunta(Persona persona, int posicion) {
+		junta[posicion] = persona;
+	}
+
+	public Persona getPersonaJunta(int posicion) {
+		return junta[posicion];
+	}
+
+	public void addPersona(Persona persona) {
+		personas.add(persona);
+	}
 }
