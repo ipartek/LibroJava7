@@ -1,7 +1,7 @@
-package com.ipartek.formacion.javierlete.ejemplopoo.programa;
+package com.ipartek.formacion.danielsan.pruebas;
 
-import com.ipartek.formacion.javierlete.ejemplopoo.tipos.Punto;
-import com.ipartek.formacion.javierlete.ejemplopoo.tipos.PuntoNombre;
+import com.ipartek.formacion.danielsan.Punto;
+import com.ipartek.formacion.danielsan.PuntoNombre;
 
 public class PuntoNombrePrueba {
 
@@ -10,7 +10,6 @@ public class PuntoNombrePrueba {
 		ptn = new PuntoNombre();
 
 		System.out.println(ptn);
-
 		ptn.setX(5);
 		ptn.setY(7);
 		ptn.setNombre("Ipartek");
@@ -21,44 +20,29 @@ public class PuntoNombrePrueba {
 		p = ptn;
 
 		// p.getNombre();
+		System.out.println("Paso" + p);
 
 		if (p instanceof PuntoNombre) {
 			PuntoNombre ptn2;
 			ptn2 = (PuntoNombre) p;
 			System.out.println(ptn2.getNombre());
+			System.out.println(ptn2);
 		}
 
 		Punto pt = new Punto();
-		// PuntoNombre ptn3; // = new PuntoNombre();
-		// ptn3 = (PuntoNombre) pt;
-
+		// PuntoNombre ptn3;
+		// ptn3 = (PuntoNombre) pt; // ¡¡¡MAAAAL!!!
 		// System.out.println(ptn3.getNombre());
 
 		System.out.println(p instanceof PuntoNombre);
 		System.out.println(pt instanceof PuntoNombre);
 
+		System.out.println(ptn.getX());
 		p.setX(2000);
 		System.out.println(ptn.getX());
 
 		System.out.println(((PuntoNombre) p).getNombre());
-		// System.out.println((PuntoNombre)p.getNombre());
 
-		System.out.println(((PuntoNombre) p).getNombre());
-
-		Object o = ptn;
-
-		System.out.println(ptn instanceof Object); // SIEMPRE ES TRUE
-
-		// System.out.println(o.toString());
-		// System.out.println(ptn.toString());
-		System.out.println(o);
-		System.out.println(ptn);
-
-		Object otro = new Punto(1, 2);
-		System.out.println(otro);
-
-		otro = new PuntoNombre();
-		System.out.println(otro);
 	}
 
 }

@@ -7,6 +7,11 @@ public class PuntoNombre extends Punto {
 		return nombre;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + " [nombre=" + nombre + "]";
+	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}

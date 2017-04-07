@@ -26,6 +26,11 @@ public class Punto {
 		this.x = (double) x;
 	}
 
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
+	}
+
 	public int getY() {
 		return (int) y;
 	}
