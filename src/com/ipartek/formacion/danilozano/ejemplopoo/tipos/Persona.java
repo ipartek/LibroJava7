@@ -1,16 +1,19 @@
 package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
+
+
 public class Persona {
+	@Override
+	public String toString() {
+		return ""+ empleados ;
+	}
+
 	private int id;
 	private String nombre;
 	private Date fechaNacimiento;
-
-	@Override
-	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
-	}
 
 	public Persona(int id, String nombre) {
 		setId(id);
@@ -41,16 +44,28 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public String aTexto() {
+	@SuppressWarnings("deprecation")
+	//public String aTexto() {
 
 		// return
 		// String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %3$te-%3$tm-%3$tY",
 		// getId(), getNombre(), getFechaNacimiento());
-		return String.format("ID: %d, NOMBRE: %s, FECHA_NACIMIENTO: %d-%d-%d", getId(), getNombre(), getFechaNacimiento().getDate(), getFechaNacimiento().getMonth() + 1, getFechaNacimiento()
-				.getYear() + 1900);
-	}
+		
+	//}
 
 	private Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
+
+	ArrayList<Empleado> empleados = new ArrayList<Empleado>();
+
+	public void add(Empleado empleado) {
+		empleados.add(empleado);
+}
+	public double getTotalSueldoBruto() {
+		double totalSueldoBruto = 0.0;
+		for (Empleado nuevo : empleados)
+			totalSueldoBruto += nuevo.getSueldoBruto();
+		return totalSueldoBruto;
+	}	
 }

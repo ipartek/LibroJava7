@@ -3,6 +3,7 @@ package com.ipartek.formacion.josurrutia;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
@@ -41,8 +42,7 @@ public class Ejemplo001 {
 
 	@SuppressWarnings({ "unused", "unchecked" })
 	private static void coleciones() {
-		@SuppressWarnings("rawtypes")
-		Vector v = new Vector();
+		Vector<Serializable> v = new Vector<Serializable>();
 
 		v.add("HOLA");
 		v.add(7);
@@ -62,10 +62,10 @@ public class Ejemplo001 {
 		Object[] o = v.toArray();
 		System.out.println(o[1]);
 
-		v.add(new Vector());
-		v.add(new Vector());
+		v.add(new Vector<Object>());
+		v.add(new Vector<Object>());
 
-		((Vector) v.get(3)).add("asdas");
+		((Vector<String>) v.get(3)).add("asdas");
 
 	}
 
