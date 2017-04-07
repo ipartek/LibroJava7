@@ -11,6 +11,11 @@ public enum PuestoEmpresa {
 		this.sueldoBase = sueldoBase;
 	}
 
+	private PuestoEmpresa() {
+		this.puesto = null;
+		this.sueldoBase = 0;
+	}
+
 	public String getPuesto() {
 		return puesto;
 	}
