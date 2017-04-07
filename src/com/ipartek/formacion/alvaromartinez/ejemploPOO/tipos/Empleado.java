@@ -1,6 +1,6 @@
 package com.ipartek.formacion.alvaromartinez.ejemploPOO.tipos;
 
-public class Empleado {
+public class Empleado extends Persona {
 
 	// atributos
 	private String dni;

@@ -88,9 +88,17 @@ public class Empresa {
 		this.director = new Persona();
 	}
 
-	public static double getTotalSueldoBruto() {
-		
-		for(  )
+	public double getTotalSueldoBruto() {
+		double totalSueldoBruto = 0.0;
+
+		// creo una variable Persona para recorrer el aray personas
+		for (Persona persona : personas) {
+			if (persona instanceof Empleado) {
+				// creo un Empleado donde guardo la persona empleada
+				Empleado empleadoPersona = (Empleado) persona;
+				totalSueldoBruto = totalSueldoBruto + empleadoPersona.getSueldoBruto();
+			}
 		}
+		return totalSueldoBruto;
 	}
 }
