@@ -38,5 +38,5 @@ public class Puesto {
 	public String toString() {
 		return "Puesto [denominacion=" + denominacion + ", sueldoBaase=" + sueldoBaase + "]";
 	}
-
+	// hola
 }

@@ -74,5 +74,5 @@ public class Empleado extends Persona {
 		return "Empleado [dni=" + dni + ", numeroSeguridadSocial=" + numeroSeguridadSocial + ", puesto=" + puesto
 				+ ", empresaRazonSocial=" + empresaRazonSocial + ", sueldoBruto=" + sueldoBruto + "]";
 	}
-
+	// vvffr
 }
