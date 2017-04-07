@@ -90,8 +90,7 @@ public class Empresa {
 
 	public static double getTotalSueldoBruto() {
 		
-		for(  ){
-			
+		for(  )
 		}
 	}
 }
