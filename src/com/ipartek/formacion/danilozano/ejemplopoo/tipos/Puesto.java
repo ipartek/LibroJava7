@@ -1,16 +1,17 @@
 package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 
-public class Puesto {
+import java.math.BigDecimal;
 
-	private String denominacion;
-	private String sueldoBase;
+public enum Puesto {
+	DIRECTOR(new BigDecimal(50000.0)), JUNTA(new BigDecimal(40000.0)), EMPLEADO(new BigDecimal(30000.0));
 
+	private BigDecimal sueldoBase;
 
+	private Puesto(BigDecimal sueldoBase) {
+		this.sueldoBase = sueldoBase;
+	}
 
-
-
-
-
-
+	public BigDecimal getSueldoBase() {
+		return sueldoBase;
+	}
 }
-

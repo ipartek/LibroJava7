@@ -1,40 +1,66 @@
 package com.ipartek.formacion.danilozano.ejemplopoo.tipos;
 
-import java.util.ArrayList;
+import java.math.BigDecimal;
 
-public class Empleado {
-
+public class Empleado extends Persona {
+	// Un *Empleado* es una *Persona* que además tiene...
 	private String dni;
-	private int numeroSeguridadSocial;
-	private String empresa;
-	private double sueldoBruto;
 
-	public Empleado(String dni, int numeroSeguridadSocial, String empresa,
-			double sueldoBruto) {
-		super();
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
 		this.dni = dni;
-		this.numeroSeguridadSocial = numeroSeguridadSocial;
-		this.empresa = empresa;
-		setSueldoBruto(sueldoBruto);
 	}
 
-	public double getSueldoBruto() {
-		return sueldoBruto;
+	private String nss;
+
+	public String getNss() {
+		return nss;
 	}
 
-	public void setSueldoBruto(double sueldoBruto) {
+	public void setNss(String nss) {
+		this.nss = nss;
+	}
+
+	private Puesto puesto;
+
+	public Puesto getPuesto() {
+		return puesto;
+	}
+
+	public void setPuesto(Puesto puesto) {
+		this.puesto = puesto;
+	}
+
+	private BigDecimal sueldoBruto;
+	private Empresa empresa;
+
+	public Empleado(int id, String nombre, BigDecimal sueldoBruto, Puesto puesto) {
+		super(id, nombre);
 		this.sueldoBruto = sueldoBruto;
+		this.puesto = puesto;
+	}
+
+	public Empleado(int id, String nombre, Puesto puesto) {
+		this(id, nombre, puesto.getSueldoBase(), puesto);
+	}
+
+	public BigDecimal getSueldoBruto() {
+		return this.sueldoBruto;
 	}
 
 	@Override
 	public String toString() {
-		return "DNI: "+dni+ "S.S: "+numeroSeguridadSocial+ "Empresa: "+ empresa+"Sueldo Bruto: "+sueldoBruto+"\n";
+		return "\nEmpleado " + super.toString() + "  [sueldoBruto=" + sueldoBruto + " puesto=" + puesto + "]";
 	}
 
-	
-
+	public Empresa getEmpresa() {
+		return empresa;
 	}
 
-	// /////////////////////////////////////////////////////////
-	// empresa ->getTotalSueldoBruto
-
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
+}
