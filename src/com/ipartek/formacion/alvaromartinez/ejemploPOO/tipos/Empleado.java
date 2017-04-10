@@ -30,7 +30,7 @@ public class Empleado extends Persona {
 	}
 
 	public String getDni() {
-		return dni;
+		return this.dni;
 	}
 
 	public void setDni(String dni) {
@@ -38,7 +38,7 @@ public class Empleado extends Persona {
 	}
 
 	public String getNumeroSeguridadSocial() {
-		return numeroSeguridadSocial;
+		return this.numeroSeguridadSocial;
 	}
 
 	public void setNumeroSeguridadSocial(String numeroSeguridadSocial) {
@@ -46,7 +46,7 @@ public class Empleado extends Persona {
 	}
 
 	public Puesto getPuesto() {
-		return puesto;
+		return this.puesto;
 	}
 
 	public void setPuesto(Puesto puesto) {
@@ -54,7 +54,7 @@ public class Empleado extends Persona {
 	}
 
 	public Empresa getEmpresaRazonSocial() {
-		return empresaRazonSocial;
+		return this.empresaRazonSocial;
 	}
 
 	public void setEmpresaRazonSocial(Empresa empresaRazonSocial) {
@@ -62,7 +62,7 @@ public class Empleado extends Persona {
 	}
 
 	public double getSueldoBruto() {
-		return sueldoBruto;
+		return this.sueldoBruto;
 	}
 
 	public void setSueldoBruto(double sueldoBruto) {

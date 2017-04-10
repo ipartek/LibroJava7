@@ -91,11 +91,13 @@ public class Empresa {
 	public double getTotalSueldoBruto() {
 		double totalSueldoBruto = 0.0;
 
+		Empleado empleadoPersona;
+
 		// creo una variable Persona para recorrer el aray personas
 		for (Persona persona : personas) {
 			if (persona instanceof Empleado) {
 				// creo un Empleado donde guardo la persona empleada
-				Empleado empleadoPersona = (Empleado) persona;
+				empleadoPersona = (Empleado) persona;
 				totalSueldoBruto = totalSueldoBruto + empleadoPersona.getSueldoBruto();
 			}
 		}

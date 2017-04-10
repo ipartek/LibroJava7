@@ -4,18 +4,18 @@ public class Puesto {
 
 	// atributos
 	private String denominacion;
-	private double sueldoBaase;
+	private double sueldoBase;
 
 	// constructores
 	public Puesto() {
 		this.denominacion = "SIN DENOMNACIÓN";
-		this.sueldoBaase = 0.0;
+		this.sueldoBase = 0.0;
 	}
 
-	public Puesto(String denominacion, double sueldoBaase) {
+	public Puesto(String denominacion, double sueldoBase) {
 		super();
 		this.denominacion = denominacion;
-		this.sueldoBaase = sueldoBaase;
+		this.sueldoBase = sueldoBase;
 	}
 
 	public String getDenominacion() {
@@ -26,17 +26,17 @@ public class Puesto {
 		this.denominacion = denominacion;
 	}
 
-	public double getSueldoBaase() {
-		return sueldoBaase;
+	public double getSueldoBase() {
+		return sueldoBase;
 	}
 
-	public void setSueldoBaase(double sueldoBaase) {
-		this.sueldoBaase = sueldoBaase;
+	public void setSueldoBase(double sueldoBase) {
+		this.sueldoBase = sueldoBase;
 	}
 
 	@Override
 	public String toString() {
-		return "Puesto [denominacion=" + denominacion + ", sueldoBaase=" + sueldoBaase + "]";
+		return "Puesto [denominacion=" + denominacion + ", sueldoBase=" + sueldoBase + "]";
 	}
 	// hola
 }
