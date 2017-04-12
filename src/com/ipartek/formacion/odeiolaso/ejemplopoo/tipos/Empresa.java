@@ -1,5 +1,6 @@
 package com.ipartek.formacion.odeiolaso.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -45,8 +46,63 @@ public class Empresa {
 	}
 
 	public void addPersona(Persona persona) {
-		persona.add(persona);
+		personas.add(persona);
 
+		Empleado e;
+		if (persona instanceof Empleado) {
+			e = (Empleado) persona;
+			e.setEmpresa(this);
+
+			switch (e.getPuesto()) {
+			case DIRECTOR:
+				if (this.director == null)
+					this.director = e;
+				else
+					throw new RuntimeException("No se admite otro director");
+				break;
+			case JUNTA:
+				boolean sentado = false;
+				for (int i = 0; i < junta.length; i++) {
+					if (junta[i] == null) {
+						junta[i] = e;
+						sentado = true;
+						break;
+					}
+				}
+
+				if (!sentado)
+					throw new RuntimeException("No se ha podido sentar al juntero");
+
+				break;
+			default:
+				break;
+			}
+		}
+	}
+
+	public Persona[] getJunta() {
+		return junta;
+	}
+
+	public void setJunta(Persona[] junta) {
+		this.junta = junta;
+	}
+
+	// NUEVOS METODOS PARA EMPLEADOS
+	public BigDecimal getTotalSueldoBruto() {
+		BigDecimal total = new BigDecimal(0.0);
+
+		Empleado e;
+
+		for (Persona p : personas) {
+			if (p instanceof Empleado) {
+				e = (Empleado) p;
+				total = total.add(e.getSueldoBruto());
+				// total.add(((Empleado)p).getSueldoBruto());
+			}
+		}
+
+		return total;
 	}
 
 }

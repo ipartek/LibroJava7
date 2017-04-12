@@ -1,5 +1,6 @@
 package com.ipartek.formacion.odeiolaso.ejemplopoo.tipos;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Carrito /* extends ArrayList<Producto> */{
@@ -11,7 +12,7 @@ public class Carrito /* extends ArrayList<Producto> */{
 	// private String nombre;
 	// private double precio;
 	// private Producto producto = new Producto(id, nombre, precio);
-	private double precioTotal, ivaSobrePrecioTotal, precioTotalConIva;
+	private double precioTotal; // ivaSobrePrecioTotal, precioTotalConIva;
 
 	public void add(Producto producto) {
 		productos.add(producto);
@@ -38,6 +39,16 @@ public class Carrito /* extends ArrayList<Producto> */{
 		}
 
 		return precioTotal;
+	}
+
+	public BigDecimal getPrecioTotalSeguro() {
+		BigDecimal precioTotalSeguro = new BigDecimal(0 - 0);
+
+		for (Producto p : productos) {
+			precioTotalSeguro = precioTotalSeguro.add(p.getPrecioSeguro());
+		}
+
+		return precioTotalSeguro;
 	}
 
 	public String getPrecioTotal(int decimales) {

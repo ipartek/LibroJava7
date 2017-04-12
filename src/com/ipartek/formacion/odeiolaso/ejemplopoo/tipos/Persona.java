@@ -63,9 +63,4 @@ public class Persona {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + "]";
 	}
 
-	public void add(Persona persona) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

@@ -1,5 +1,7 @@
 package com.ipartek.formacion.odeiolaso;
 
+import java.math.BigDecimal;
+
 import com.ipartek.formacion.odeiolaso.ejemplopoo.tipos.Carrito;
 import com.ipartek.formacion.odeiolaso.ejemplopoo.tipos.Producto;
 
@@ -29,6 +31,9 @@ public class CarritoPrueba {
 		System.out.println(c.getIvaSobrePrecioTotal(5)); // Asumimos IVA 21%
 		System.out.println(c.getPrecioTotalConIva());
 		System.out.println(c.getPrecioTotalConIva(7));
+
+		double precio = 125.03;
+		BigDecimal precioNuevo = new BigDecimal(125.03);
 
 	}
 
