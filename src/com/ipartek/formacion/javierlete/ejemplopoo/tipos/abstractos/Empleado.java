@@ -12,7 +12,7 @@ public abstract class Empleado {
 
 	public Empleado(String nombre) {
 		super();
-		this.nombre = nombre;
+		setNombre(nombre);
 	}
 
 	public String getNombre() {
@@ -20,6 +20,9 @@ public abstract class Empleado {
 	}
 
 	public void setNombre(String nombre) {
+		if (nombre == null || nombre.trim().length() == 0)
+			throw new EmpleadoException("No se admiten nombres nulos ni vacíos");
+
 		this.nombre = nombre;
 	}
 
