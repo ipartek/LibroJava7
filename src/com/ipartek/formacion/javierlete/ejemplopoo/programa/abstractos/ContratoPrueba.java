@@ -11,6 +11,7 @@ public class ContratoPrueba {
 
 		c.clausula1();
 		System.out.println(c.clausula2("Prueba"));
+		System.out.println(Double.SIZE);
 	}
 
 }

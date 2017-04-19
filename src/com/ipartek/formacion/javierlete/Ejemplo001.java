@@ -3,8 +3,10 @@ package com.ipartek.formacion.javierlete;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 //import java.io.Console;
 import java.util.Scanner;
 import java.util.Vector;
@@ -21,9 +23,48 @@ public class Ejemplo001 {
 		// System.out.println(factorial(5));
 		// colecciones();
 		// coleccionesJava5();
-		fechas();
+		// fechas();
+		// conversiones();
 	}
 
+	@SuppressWarnings("unused")
+	private static void conversiones() {
+		int tipoPrimitivo = 5;
+		String str = String.valueOf(tipoPrimitivo);
+
+		Object objeto = new Date();
+
+		str = objeto.toString();
+
+		int[] arr = { 1, 5, 3, 6 };
+		str = java.util.Arrays.toString(arr);
+
+		str = "6";
+
+		byte by = Byte.parseByte(str);
+		short sh = Short.parseShort(str);
+		int in = Integer.parseInt(str);
+		long lo = Long.parseLong(str);
+
+		float fl = Float.parseFloat(str);
+		double db = Double.parseDouble(str);
+
+		boolean bo = Boolean.parseBoolean(str);
+		char ch = str.trim().charAt(0);
+
+		BigDecimal bd1 = new BigDecimal(str);
+		BigDecimal bd2 = new BigDecimal(db);
+
+		double dn = bd2.doubleValue();
+
+		Date d = new Date();
+		GregorianCalendar gc = new GregorianCalendar();
+		gc.setTime(d);
+
+		System.out.println(gc);
+	}
+
+	@SuppressWarnings("unused")
 	private static void fechas() {
 		@SuppressWarnings("deprecation")
 		Date d = new Date("1582/10/05");
