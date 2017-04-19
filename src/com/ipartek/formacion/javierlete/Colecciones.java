@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+import java.util.TreeMap;
 
 public class Colecciones {
 
@@ -13,9 +17,56 @@ public class Colecciones {
 	public static void main(String[] args) {
 		// ejemploArrayList();
 		// ejemploHashSet();
-		ejemploHashMap();
+		// ejemploHashMap();
+		// ejemploStack(); //PILAS
+		// ejemploQueue(); //COLAS
+		ejemploTreeMap();
 	}
 
+	private static void ejemploTreeMap() {
+		TreeMap<Integer, String> tm = new TreeMap<Integer, String>();
+
+		tm.put(1, "Uno");
+		tm.put(3, "Tres");
+		tm.put(2, "Dos");
+
+		System.out.println(tm.get(2));
+
+		for (int i : tm.keySet())
+			System.out.printf("%d, %s\n", i, tm.get(i));
+	}
+
+	@SuppressWarnings("unused")
+	private static void ejemploQueue() {
+		Queue<String> cola = new LinkedList<String>();
+
+		cola.offer("Primero");
+		cola.offer("Segundo");
+		cola.offer("Tercero");
+
+		System.out.println(cola.poll());
+		System.out.println(cola.peek());
+		System.out.println(cola.poll());
+		System.out.println(cola.poll());
+		System.out.println(cola.poll());
+	}
+
+	@SuppressWarnings("unused")
+	private static void ejemploStack() {
+		Stack<String> pila = new Stack<String>();
+
+		pila.push("Primer plato");
+		pila.push("Segundo plato");
+		pila.push("Tercer plato");
+
+		System.out.println(pila.pop());
+		System.out.println("Echamos un vistazo " + pila.peek());
+		System.out.println(pila.pop());
+		System.out.println(pila.pop());
+		System.out.println(pila.pop());
+	}
+
+	@SuppressWarnings("unused")
 	private static void ejemploHashMap() {
 		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 

@@ -15,5 +15,4 @@ public class EjemploInterfaces {
 		for (Rodable rodable : rodables)
 			rodable.rodar();
 	}
-
 }
