@@ -19,7 +19,7 @@ public class Tallas {
 			System.out.println("La talla no exite.");
 		} else
 			System.out.println("La talla existe.");
-
-	}
+		a.close();
+	}// main.
 
 }

@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class SwichCase {
 
 	public static void main(String[] args) {
-		
-	System.out.println("PARA SABER CUANTOS DIAS TIENE EL MES:");
-		Scanner teclado=new Scanner(System.in);//pedir datos por teclado.
-		int mes;//variable tipo numero entero llamada mes.
+
+		System.out.println("PARA SABER CUANTOS DIAS TIENE EL MES:");
+		Scanner teclado = new Scanner(System.in);// pedir datos por teclado.
+		int mes;// variable tipo numero entero llamada mes.
 		System.out.println("Numero de mes:");
-		mes=teclado.nextInt();//para meter por teclado el dato del mes.
-		switch(mes){
+		mes = teclado.nextInt();// para meter por teclado el dato del mes.
+		switch (mes) {
 		case 1:
 			System.out.println("Enero tiene 31 dias.");
 			break;
@@ -49,24 +49,13 @@ public class SwichCase {
 			System.out.println("Diciembre tiene 31 dias.");
 			break;
 		default:
-		System.out.println("El mes introducido no existe. Solo hay 12 meses al año o todavia no te has enterado, jejejejejeje...");
-		/*Tambien se puede hacer de otra manera:
-		 * swich (mes){
-		 *case1: case3: case5: case7: case 8: case 10: case 12:
-		 *System.out.println("Este mes tiene 31 dias.");
-		 *break;
-		 *case4: case 6: case9: case 11:
-		 *System.out.println("Este mes tiene 30 dias.");
-		 *break;
-		 *case 2:
-		 *System.out.println("Este mes tiene 28 dias.Excepto cuando es bisiesto tiene 29 dias.")
-		 *break;
-		 *default:
-		 *System.out.println("Ese me no existe, solo hay 12 meses al año o no te has enterado jejejejeje.....")
-		 * */
-		}//switch.
-					
-	}//main
+			System.out.println("El mes introducido no existe. Solo hay 12 meses al año o todavia no te has enterado, jejejejejeje...");
+			/*
+			 * Tambien se puede hacer de otra manera: swich (mes){case1: case3: case5: case7: case 8: case 10: case 12:System.out.println("Este mes tiene 31 dias.");break;case4: case 6: case9: case 11:System.out.println("Este mes tiene 30 dias.");break;case 2:
+			 * System.out.println("Este mes tiene 28 dias.Excepto cuando es bisiesto tiene 29 dias.")break;default:System.out.println("Ese me no existe, solo hay 12 meses al año o no te has enterado jejejejeje.....")
+			 */
+		}// switch.
+		teclado.close();
+	}// main
 
-}//SwichCase
- 
+}// SwichCase
