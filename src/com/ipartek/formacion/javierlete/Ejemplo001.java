@@ -34,7 +34,7 @@ public class Ejemplo001 {
 
 		Object objeto = new Date();
 
-		str = objeto.toString();
+		str = objeto.toString(); // str = String.valueOf(objeto)
 
 		int[] arr = { 1, 5, 3, 6 };
 		str = java.util.Arrays.toString(arr);
