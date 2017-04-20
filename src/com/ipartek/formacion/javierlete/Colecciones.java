@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 import java.util.Stack;
 import java.util.TreeMap;
 
@@ -34,6 +36,8 @@ public class Colecciones {
 
 		for (int i : tm.keySet())
 			System.out.printf("%d, %s\n", i, tm.get(i));
+
+		System.out.println(tm);
 	}
 
 	@SuppressWarnings("unused")
@@ -68,7 +72,7 @@ public class Colecciones {
 
 	@SuppressWarnings("unused")
 	private static void ejemploHashMap() {
-		HashMap<String, Integer> hm = new HashMap<String, Integer>();
+		Map<String, Integer> hm = new HashMap<String, Integer>();
 
 		hm.put("UNO", 1); // Versiones anteriores a Java 5: hm.put("UNO", new Integer(1));
 		hm.put("CINCO", 5);
@@ -129,7 +133,7 @@ public class Colecciones {
 
 	@SuppressWarnings("unused")
 	private static void ejemploHashSet() {
-		HashSet<String> hs = new HashSet<String>();
+		Set<String> hs = new HashSet<String>();
 
 		hs.add("Uno");
 		hs.add("Dos");

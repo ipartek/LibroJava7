@@ -91,9 +91,11 @@ public class Ficheros {
 			System.out.println("No se ha podido abrir el fichero");
 			System.out.println(e.getMessage());
 		} finally {
-			pw.flush();
-			pw.close();
-			pw = null;
+			if (pw != null) {
+				pw.flush();
+				pw.close();
+				pw = null;
+			}
 		}
 
 		BufferedReader br = null;
@@ -113,11 +115,14 @@ public class Ficheros {
 			System.out.println(e.getMessage());
 		} finally {
 			try {
-				br.close();
+				if (br != null) {
+					br.close();
+					br = null;
+				}
 			} catch (IOException e) {
 				System.out.println("Error al cerrar el fichero");
 			}
-			br = null;
+
 		}
 	}
 

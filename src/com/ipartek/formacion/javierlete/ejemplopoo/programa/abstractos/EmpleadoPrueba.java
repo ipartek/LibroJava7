@@ -13,7 +13,7 @@ public class EmpleadoPrueba {
 		ArrayList<Empleado> empleados = new ArrayList<Empleado>();
 
 		try {
-			empleados.add(new EmpleadoPorHoras("Javier", 60, 20.0));
+			empleados.add(new EmpleadoPorHoras("      ", 60, 20.0));
 			empleados.add(new EmpleadoIndefinido("Ander", 14, 30000.0));
 
 			for (Empleado empleado : empleados)
