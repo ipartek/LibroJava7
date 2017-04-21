@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Segunda</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1>Segunda</h1>
+    <a href="index.html">Ir a la primera</a>
+
+    <form action="#">
+        <label for="mujer">Mujer</label>
+        <input type="radio" name="sexo" value="Mujer" id="mujer" />
+        <label for="hombre">Hombre</label>
+        <input type="radio" name="sexo" value="Hombre" id="hombre" />
+
+        <select name="tipo">
+           <optgroup label="Gratuito">
+           
+            <option value="0">Bronce</option>
+            </optgroup>
+            <optgroup label="De pago">
+            <option value="1">Plata</option>
+            <option value="2">Oro</option>
+            </optgroup>
+        </select>
+
+       <select name="tipo2" multiple="multiple" size="5">
+           <optgroup label="Gratuito">
+           
+            <option value="0">Bronce</option>
+            </optgroup>
+            <optgroup label="De pago">
+            <option value="1">Plata</option>
+            <option value="2">Oro</option>
+            </optgroup>
+        </select>
+        
+        <label for="suscripcion">Suscribirse</label>
+        <input type="checkbox" id="suscripcion" name="suscripcion" />
+        
+        <input type="submit" value="ENVIAR" />
+    </form>
+
+    <form action="#">
+        <!--<form action="https://www.google.es/">-->
+        <p>
+            <label for="consulta">Consulta</label>
+            <input type="text" name="q" id="consulta" placeholder="Para buscador de Google" />
+        </p>
+        <p>
+            <input type="submit" value="Mandar a Google" />
+        </p>
+    </form>
+</body>
+
+</html>
