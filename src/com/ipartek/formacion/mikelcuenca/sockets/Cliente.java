@@ -18,8 +18,8 @@ public class Cliente {
 
 		System.out.println(br.readLine());
 		System.out.println(br.readLine());
-		// System.out.println(br.readLine());
-		// System.out.println(br.readLine());
+		System.out.println(br.readLine());
+		System.out.println(br.readLine());
 
 		String texto = "";
 

@@ -24,8 +24,8 @@ public class Servidor {
 
 		pw.println("Bienvenido al servidor MAYUSCULADOR");
 		pw.println("Welcome to the MAYUSCULATOR server");
-		// pw.println("Escribe un texto para que te lo pase a mayúsculas");
-		// pw.println("Escribe Q para salir");
+		pw.println("Escribe un texto para que te lo pase a mayúsculas");
+		pw.println("Escribe Q para salir");
 
 		String texto = "";
 
